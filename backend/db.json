@@ -1,0 +1,127 @@
+{
+  "pacientes":[
+    {
+      "id":"1",
+      "nome":"José Francisco Castro",
+      "cpf":"12345678910",
+      "email":"fulano@email.com",
+      "telefone":"61999998888",
+      "endereco":[
+        {
+          "logradouro":"Qr 123 conjunto 18 lote 14",
+          "bairro":"centro",
+          "numero":"14",
+          "cep":"72309301"
+        }
+      ]
+    },
+    {
+      "id":"2",
+      "nome":"Maria Rosário Silva",
+      "cpf":"12345579912",
+      "email":"maria.rosario@email.com",
+      "telefone":"61999997887",
+      "endereco":[
+        {
+          "logradouro":"Rua alcantara ",
+          "bairro":"sudoeste",
+          "numero":"23",
+          "cep":"01001111"
+        }
+      ]
+    },
+    {
+      "id":"3",
+      "nome":"Jéssica Castro Alves",
+      "cpf":"03021095102",
+      "email":"jessi.castro@email.com",
+      "telefone":"61988776655",
+      "endereco":[
+        {
+          "logradouro":"Qr 523 conjunto 18 lote 14",
+          "bairro":"norte",
+          "numero":"",
+          "cep":"72309510"
+        }
+      ]
+    },
+    {
+      "id":"4",
+      "nome":"Francisca das Neves",
+      "cpf":"32188013586",
+      "email":"fran.neves@email.com",
+      "telefone":"1165529090",
+      "endereco":[
+        {
+          "logradouro":"Rua frei Daciolo",
+          "bairro":"oeste",
+          "numero":"153",
+          "cep":"01123730"
+        }
+      ]
+    }
+
+  ],
+  "medicos":[
+    {
+      "id":"1",
+      "nome":"Alfred Robert Barbosa",
+      "crm":"45566",
+      "email":"alfred.robert@vollmed.com",
+      "especialidade":"clinica médica",
+      "endereco":[
+        {
+          "logradouro":"quadra 14 lote 290 apartamento",
+          "bairro":"leste",
+          "numero":"500",
+          "cep":"02233444"
+        }
+      ]
+    },
+    {
+      "id":"2",
+      "nome":"Magda Schutz Castro",
+      "crm":"32366",
+      "email":"magda.schutz@vollmed.com",
+      "especialidade":"ginecologia",
+      "endereco":[
+        {
+          "logradouro":"Rua Espinoza lote 1023 apartamento ",
+          "bairro":"centro",
+          "numero":"333",
+          "cep":"33222199"
+        }
+      ]
+    },
+    {
+      "id":"3",
+      "nome":"Alberian Potter Clinff",
+      "crm":"72312",
+      "email":"alberian.potter@vollmed.com",
+      "especialidade":"ortopedia",
+      "endereco":[
+        {
+          "logradouro":"quadra 99 lote 33 apartamento",
+          "bairro":"noroeste",
+          "numero":"235",
+          "cep":"02233779"
+        }
+      ]
+    },
+    {
+      "id":"4",
+      "nome":"Stefanny Azevedo Queiroz",
+      "crm":"66798",
+      "email":"stefanny.azevedo@vollmed.com",
+      "especialidade":"pediatria",
+      "endereco":[
+        {
+          "logradouro":"Condominio 26 de setembro lote 393 casa",
+          "bairro":"centro",
+          "numero":"666",
+          "cep":"72723093"
+        }
+      ]
+    }
+  ]
+}

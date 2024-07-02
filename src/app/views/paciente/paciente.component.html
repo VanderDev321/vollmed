@@ -1,0 +1,22 @@
+<section class="box">
+  <div class="cabecalho">
+    <h1>Seção de pacientes: </h1>
+  </div>
+  <div class="lista-pacientes" *ngFor="let paciente of listaPacientes">
+    <div>
+      <div class="card">
+        <p>
+            <span>Nome</span>: {{paciente.nome}}
+        </p>
+        <p>
+          <span>cpf</span>: {{paciente.cpf}}
+        </p>
+        <p>
+          <span>telefone</span>: {{paciente.telefone}}
+        </p>
+        <img src="../../../assets/imagens/icone-editar.png" alt="ícone com o símbolo de um lápis para editar informações" (click)="editar()">
+        <img src="../../../assets/imagens/icone-excluir.png" alt="ícone de lixeira para excluir um paciente"  (click)="excluir()">
+      </div>
+    </div>
+  </div>
+</section>

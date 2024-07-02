@@ -1,0 +1,33 @@
+
+.box{
+  background-color:#0081b1;
+  color:#ffffff ;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 30dvh;
+  border-radius: 5px;
+}
+header a {
+  margin-left: 2em;
+  color: azure;
+  text-decoration: solid;
+  font-size: 20px;
+
+}
+header a:hover{
+  color:gold;
+  transition: all 0.5s ease-in;
+  border: 2px thin #050C42;
+}
+button{
+  border: none;
+  height: 50dvh;
+}
+img{
+ width: 13% ;
+ padding:5px ;
+ margin-left: 15px;
+}
