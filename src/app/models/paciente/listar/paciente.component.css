@@ -1,0 +1,65 @@
+.box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150vh;
+  min-height: 100vh;
+}
+.cabecalho{
+  padding: 1em 0 1em 0;
+  font-size: 1.30em;
+}
+.botao{
+  font-size: 1.15em;
+  padding:1em 1.35em 1em 1.35em;
+  margin-bottom: 1em;
+  border:2px solid #C0C0C0;
+  border-radius: 5px;
+}
+
+.card{
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  margin-left: 0.35em;
+  border: 2px inset black;
+  padding:2em;
+  border-radius: 1em;
+  box-shadow: 2.5px 5px;
+  cursor: pointer;
+}
+.card p{
+  padding:0.25em;
+}
+.lista-pacientes{
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+  margin: 2.5em;
+  flex-wrap: wrap;
+}
+.lista-pacientes p {
+  text-transform: capitalize;
+}
+.lista-pacientes h1{
+  margin:1em;
+}
+.lista-pacientes span{
+  font-weight: 800;
+}
+.lista-pacientes img{
+  position: relative;
+  margin-right: 0.3em;
+  left: 10em;
+}
+.lista-vazia{
+  margin-bottom: 1em;
+  padding: 0.75em;
+  font-size: 1.5em;
+  min-width: 50vh !important;
+}
+
+
+
+
+
+

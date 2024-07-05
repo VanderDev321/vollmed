@@ -1,0 +1,28 @@
+<section class="container-detalhe">
+  <div class="cabecalho">
+    <h2>Informações do paciente:</h2>
+  </div>
+  <div class="card">
+    <h2>Dados Pessoais:</h2>
+    <p><span class="label">nome:</span>{{paciente.nome}}</p>
+    <p><span class="label">cpf:</span>{{paciente.cpf}}</p>
+    <h2>Contatos:</h2>
+    <p><span class="label">telefone:</span>{{paciente.telefone}}</p>
+    <p><span class="label">email:</span>{{paciente.email}}</p>
+    <h2>Endereço:</h2>
+    <p><span class="label">cep:</span>{{paciente.cep}}</p>
+    <p><span class="label">logradouro:</span>{{paciente.logradouro}} </p>
+    <p><span class="label">bairro:</span>{{paciente.bairro}}</p>
+    <p><span class="label">número:</span>{{paciente.numero}}</p>
+    <p><span class="label">estado:</span>{{paciente.estado}}</p>
+    <p><span class="label">complemento:</span>{{paciente.complemento}}</p>
+    <div class="acoes">
+        <img src="/../assets/imagens/icone-editar.png" alt="ícone de editar" routerLink="/editarPaciente/{{paciente.id}}">
+        <img src="/../assets/imagens/icone-excluir.png" alt="ícone de excluir"(click)="excluir(paciente.id)">
+    </div>
+  </div>
+  <div class="botao-view">
+    <button (click)="retornarLista()">Retornar</button>
+  </div>
+</section>
+

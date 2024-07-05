@@ -1,0 +1,38 @@
+.editar{
+  height: 100vh;
+
+}
+.editar-cabecalho{
+  font-size: 1.5em;
+  display: block;
+  text-align: center;
+  margin:1em 2em 1em 1em;
+  text-shadow: #2e4053 0.1em 0.1em 0.3em;
+}
+.editar-formulario{
+  display: block;
+  margin-bottom: 1em;
+  padding: 3em;
+  text-align: center;
+  text-justify: distribute;
+}
+.editar-formulario label{
+  padding: 1em;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.editar-formulario input{
+  padding:0.3em 7.5em 0.3em 0.3em;
+  font-size: 1.3em;
+  margin:0.5em;
+}
+.editar-botao{
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+.editar-botao button{
+  padding:1em;
+  font-size: 1.3em;
+  margin-left:0.3em;
+}

@@ -1,0 +1,22 @@
+<section class="box">
+  <div class="cabecalho">
+    <h1>Seção de pacientes: </h1>
+  </div>
+    <button class="botao" (click)="adicionarNovo()">Adicionar Paciente</button>
+  <h1>Lista de pacientes: </h1>
+  <div class="lista-pacientes" *ngIf="listaPacientes.length > 0 else listaVazia" >
+
+    <div  *ngFor="let paciente of listaPacientes" routerLink="/detalhePaciente/{{paciente.id}}">
+        <div class="card">
+          <p><span>Nome</span>: {{paciente.nome}}</p>
+          <p><span>cpf</span>: {{paciente.cpf}}</p>
+          <p><span>telefone</span>: {{paciente.telefone}}</p>
+        </div>
+    </div>
+  </div>
+  <ng-template #listaVazia>
+    <div class="lista-vazia">
+      <p>Não há pacientes a exibir!</p>
+    </div>
+  </ng-template>
+</section>

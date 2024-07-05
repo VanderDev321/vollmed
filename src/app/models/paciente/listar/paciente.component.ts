@@ -1,4 +1,8 @@
+
+
 import { Component, OnInit } from '@angular/core';
+import { NgForm, NgModel } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Paciente } from 'src/app/interfaces/token-interface';
 import { PacienteServiceService } from 'src/app/services/paciente-service.service';
 
@@ -11,19 +15,19 @@ export class PacienteComponent implements OnInit {
 
   listaPacientes:Paciente[] =[];
 
-  constructor(private service:PacienteServiceService) { }
+
+  constructor(private service:PacienteServiceService , private router:Router ) { }
 
   ngOnInit(): void {
     this.service.buscar().subscribe(pacientes =>{
       this.listaPacientes = pacientes;
     })
+
   }
 
-  editar(){
-    alert("editar");
-  }
-  excluir(){
-    alert("excluir");
-  }
+    adicionarNovo() {
+      this.router.navigate(["/adicionarPaciente"]);
+      }
+
 
 }

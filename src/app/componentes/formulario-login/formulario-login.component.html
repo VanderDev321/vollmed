@@ -2,13 +2,13 @@
   <h3> Informe suas credenciais de login: </h3>
 </div>
 <div>
-  <form [formGroup]="formulario" class="login box"  >
+  <form ngForm #f="ngForm" class="login box"  >
     <label for="username">Usuário:</label>
-    <input type="text" name="username" id="username" formControlName="login" required minlength="5" />
+    <input type="text" name="username" id="username" ngModel required  #name="ngModel" minlength="5" />
     <label for="password">Senha:</label>
-    <input type="password" name="password" id="password" formControlName="senha" required/>
+    <input type="password" name="password" id="password" ngModel #senha="ngModel" required/>
   </form>
 </div>
 <div class="botao">
-  <button (click)="chamarContas()">Enviar dados</button>
+  <button (click)="chamarContas(f)">Enviar dados</button>
 </div>

@@ -1,0 +1,48 @@
+.main{
+  height: 140vh;
+}
+
+.formulario button{
+  margin-top: 0.35em;
+  font-size: 1em;
+  padding: 0.75em;
+  border:2px solid #C0C0C0;
+  border-radius:50px;
+}
+.formulario select{
+  display:inline;
+  padding: 0.50em;
+  margin-bottom: 1em;
+}
+.formulario-aberto{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  margin-bottom: 1.5em;
+  font-size: 1.35em;
+}
+
+.formulario-aberto p{
+  margin: 1.3em;
+  font-weight: bold;
+}
+.formulario-aberto label{
+  padding:1em;
+}
+.formulario-aberto input{
+  display: block;
+  padding:0.75em 15em 0.75em 0.75em ;
+  margin:1em;
+}
+.formulario-aberto form{
+  display:block;
+}
+.botao{
+  font-size: 1.15em;
+  padding:0.75em 1.35em 0.75em 1.35em;
+  margin-bottom: 1em;
+  border:2px solid #C0C0C0;
+  border-radius: 8px;
+}

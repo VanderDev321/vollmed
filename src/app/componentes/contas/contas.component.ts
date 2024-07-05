@@ -18,8 +18,9 @@ export class ContasComponent implements OnInit {
 
   }
   buscarMedicos(){
-    console.log("medicos");
+    this.router.navigate(['/medico'])
   }
+  
   buscarConsultas(){
     console.log("consultas");
   }

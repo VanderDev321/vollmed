@@ -7,10 +7,16 @@ import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component'
 import { PaginaInicialComponent } from './componentes/pagina-inicial/pagina-inicial.component';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { FormularioLoginComponent } from './componentes/formulario-login/formulario-login.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, NgControl } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContasComponent } from './componentes/contas/contas.component';
-import { PacienteComponent } from './views/paciente/paciente.component';
+import { PacienteComponent } from './models/paciente/listar/paciente.component';
+import { MedicoComponent } from './models/medico/medico.component';
+import { MensagemComponent } from './componentes/mensagem/mensagem.component';
+import { ViewpacienteComponent } from './views/viewpaciente/viewpaciente/viewpaciente.component';
+import { FormularioAdicionarComponent } from './models/paciente/adicionar/formulario-adicionar/formulario-adicionar.component';
+import { EditarComponent } from './models/paciente/editar/editar.component';
+
 
 @NgModule({
   declarations: [
@@ -20,14 +26,18 @@ import { PacienteComponent } from './views/paciente/paciente.component';
     RodapeComponent,
     FormularioLoginComponent,
     ContasComponent,
-    PacienteComponent
+    PacienteComponent,
+    MedicoComponent,
+    MensagemComponent,
+    ViewpacienteComponent,
+    FormularioAdicionarComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
