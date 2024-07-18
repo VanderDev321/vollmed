@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpResponse } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
-import { Login } from '../interfaces/token-interface';
+import { Login } from '../../interfaces/token-interface';
 
 @Injectable({
   providedIn: 'root'

@@ -1,10 +1,9 @@
 
-
 import { Component, OnInit } from '@angular/core';
-import { NgForm, NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Paciente } from 'src/app/interfaces/token-interface';
-import { PacienteServiceService } from 'src/app/services/paciente-service.service';
+import { PacienteServiceService } from 'src/app/services/pacientes/paciente-service.service';
+
 
 @Component({
   selector: 'app-paciente',

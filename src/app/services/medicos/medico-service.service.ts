@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Medico } from '../interfaces/token-interface';
+import { Medico } from '../../interfaces/token-interface';
 
 @Injectable({
   providedIn: 'root'

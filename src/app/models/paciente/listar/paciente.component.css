@@ -20,8 +20,8 @@
 .card{
   font-size: 1.2em;
   margin-bottom: 1em;
-  margin-left: 0.35em;
-  border: 2px inset black;
+  margin-left: 0.55em;
+  border: 2px groove black;
   padding:2em;
   border-radius: 1em;
   box-shadow: 2.5px 5px;
@@ -31,11 +31,11 @@
   padding:0.25em;
 }
 .lista-pacientes{
-  display: flex;
-  align-content: space-between;
-  align-items: center;
+  display:flex;
+  flex-flow: row wrap;
+  align-content: space-evenly;
+  align-items: auto;
   margin: 2.5em;
-  flex-wrap: wrap;
 }
 .lista-pacientes p {
   text-transform: capitalize;

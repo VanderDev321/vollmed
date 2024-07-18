@@ -5,52 +5,39 @@
       "nome": "José Francisco Castro",
       "cpf": "12345678910",
       "email": "fulano@email.com",
-      "telefone": "61999998888",
-      "cep": "72309301",
-      "logradouro": "Qr 123 conjunto 18 lote 14",
-      "bairro": "centro",
-      "numero": "14",
+      "telefone": "(61)99999-8888",
+      "cep": 72309310,
+      "logradouro": "QR 321 Conjunto 10",
+      "bairro": "Samambaia Sul (Samambaia)",
+      "numero": "18",
       "estado": "DF",
-      "complemento": ""
-    },
-    {
-      "id": "2",
-      "nome": "Maria Rosário Silva",
-      "cpf": "12345579912",
-      "email": "maria.rosario@email.com",
-      "telefone": "61999997887",
-      "cep": "01001111",
-      "logradouro": "Rua alcantara ",
-      "bairro": "sudoeste",
-      "numero": "23",
-      "estado": "MA",
       "complemento": ""
     },
     {
       "id": "3",
       "nome": "Jéssica Castro Alves",
       "cpf": "03021095102",
-      "email": "jessi.castro@email.com",
-      "telefone": "61988776655",
+      "email": "jessica.22k@email.com",
+      "telefone": "(11)98776-1442",
       "cep": "72309510",
       "logradouro": "Qr 523 conjunto 18 lote 14",
       "bairro": "norte",
       "numero": "01",
       "estado": "ce",
-      "complemento": ""
+      "complemen": ""
     },
     {
       "id": "4",
       "nome": "Francisca das Neves",
       "cpf": "32188013586",
-      "email": "fran.neves@email.com",
-      "telefone": "1165529090",
+      "email": "francis.neves@email.com",
+      "telefone": "(11)96552-9090",
       "cep": "01123730",
       "logradouro": "Rua frei Daciolo",
       "bairro": "oeste",
       "numero": "153",
-      "estado": "df",
-      "complemento": ""
+      "estado": "DF",
+      "complemento": null
     },
     {
       "id": "5",
@@ -61,9 +48,35 @@
       "cep": "11800399",
       "logradouro": "Rua das Macieiras",
       "bairro": "carvalhal",
-      "numero": "502",
+      "numero": "503",
       "estado": "MA",
       "complemento": "apartamento 212"
+    },
+    {
+      "id": "6",
+      "nome": "Jonas Marcelo de Oliveira",
+      "cpf": "04579699900",
+      "email": "jonas.marcel@email.com",
+      "telefone": "(11)99644-1800",
+      "cep": "01001-000",
+      "logradouro": "Praça da Sé",
+      "bairro": "Sé",
+      "numero": "45",
+      "estado": "SP",
+      "complemento": "lado ímpar"
+    },
+    {
+      "id": "7",
+      "nome": "Maria Anita Teles Maia",
+      "cpf": "50419390120",
+      "email": "anita.teles.maia@gmail.com",
+      "telefone": "(61)99687-3037",
+      "cep": "72309309",
+      "logradouro": "QR 321 Conjunto 9",
+      "bairro": "Samambaia Sul (Samambaia)",
+      "numero": "16",
+      "estado": "DF",
+      "complemento": "casa"
     }
   ],
   "medicos": [
@@ -73,10 +86,11 @@
       "crm": "45566",
       "email": "alfred.robert@vollmed.com",
       "especialidade": "clinica médica",
+      "cep": "02233444",
       "logradouro": "quadra 14 lote 290 apartamento",
       "bairro": "leste",
       "numero": "500",
-      "cep": "02233444",
+      "estado":"DF",
       "complemento": ""
     },
     {
@@ -84,12 +98,13 @@
       "nome": "Magda Schutz Castro",
       "crm": "32366",
       "email": "magda.schutz@vollmed.com",
+      "cep": "33222199",
       "especialidade": "ginecologia",
       "logradouro": "Rua Espinoza lote 1023 apartamento ",
       "bairro": "centro",
       "numero": "333",
-      "cep": "33222199",
-      "ativo": true
+      "estado":"GO",
+      "complemento":""
     },
     {
       "id": "3",
@@ -97,11 +112,12 @@
       "crm": "72312",
       "email": "alberian.potter@vollmed.com",
       "especialidade": "ortopedia",
+      "cep": "02233779",
       "logradouro": "quadra 99 lote 33 apartamento",
       "bairro": "noroeste",
       "numero": "235",
-      "cep": "02233779",
-      "ativo": true
+      "estado":"ES",
+      "complemento":""
     },
     {
       "id": "4",
@@ -109,11 +125,13 @@
       "crm": "66798",
       "email": "stefanny.azevedo@vollmed.com",
       "especialidade": "pediatria",
+      "cep": "72723093",
       "logradouro": "Condominio 26 de setembro lote 393 casa",
       "bairro": "centro",
       "numero": "666",
-      "cep": "72723093",
-      "ativo": true
+      "estado":"MA",
+      "complemento":""
+
     }
   ],
   "consultas": [

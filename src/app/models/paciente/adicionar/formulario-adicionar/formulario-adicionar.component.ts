@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { PacienteServiceService } from 'src/app/services/paciente-service.service';
-import { ViaCepService } from 'src/app/services/via-cep.service';
+import { PacienteServiceService } from 'src/app/services/pacientes/paciente-service.service';
+import { ViaCepService } from 'src/app/services/cep/via-cep.service';
 
 @Component({
   selector: 'app-formulario-adicionar',

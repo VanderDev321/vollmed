@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Paciente } from '../interfaces/token-interface';
+import { Paciente } from '../../interfaces/token-interface';
 import { Form, NgForm } from '@angular/forms';
 
 @Injectable({
@@ -17,7 +17,10 @@ export class PacienteServiceService {
   buscar():Observable<Paciente[]>{
     return this.httpCliente.get<Paciente[]>(this.url);
   }
-
+  atualizar(paciente:Paciente):Observable<Paciente>{
+    const urlEdit = `${this.url}/${paciente.id}`;
+    return this.httpCliente.put<Paciente>(urlEdit,paciente);
+  }
 
   criar( paciente:Paciente):Observable<Paciente>{
     console.log("função no service")

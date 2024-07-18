@@ -1,0 +1,71 @@
+.adicionar-container{
+  height: 160vh;
+}
+.cabecalho{
+  display: block;
+  text-align: center;
+  padding: 1em;
+}
+.cabecalho h2{
+  font-size: 2em;
+  margin:0em 0 1em 0;
+  text-transform: uppercase;
+}
+.cabecalho p{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.formulario{
+  height: 130vh;
+}
+form{
+  display:block;
+}
+form p{
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.35em;
+  padding:0.5em;
+}
+form label{
+  display: block;
+  font-size:1.35em;
+  margin-left: 35%;
+}
+form input{
+  margin-left:35%;
+  margin-bottom: 1em;
+  text-align: center;
+  border:1px thin #1a2421;
+  border-radius: 1em;
+  width: 30%;
+  padding:0.5em 0.5em 0.3em 0.5em;
+}
+form select{
+  border-radius: 1em;
+  text-align: center;
+  padding:0.5em;
+  margin-left: 35%;
+  margin-bottom: 1em;
+}
+form textarea{
+  display: block;
+  font-size: 1.35em;
+  margin-left: 35%;
+  width: 31em;
+  height: 8em;
+}
+.acoes{
+  display: flex;
+  margin:1.2em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.acoes button{
+  font-size:1.5em;
+  padding:0.5em;
+  margin-right: 0.5em;
+  border:1px groove #5c6473;
+  border-radius: 0.75em;
+}

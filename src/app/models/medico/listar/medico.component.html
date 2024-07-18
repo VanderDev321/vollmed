@@ -1,0 +1,20 @@
+<section class="container-medico">
+  <h1>Sessão de médicos</h1>
+  <button (click)="adcionarNovo()">Adicionar novo</button>
+  <h2> Médicos colaboradores: </h2>
+  <div class="lista-medico" *ngIf="listaMedicos.length > 0 else listaVazia">
+    <div *ngFor="let medico of listaMedicos" >
+      <div class="card">
+        <p><span>nome:</span>{{medico.nome}}</p>
+        <p><span>especialidade:</span>{{medico.especialidade}}</p>
+        <p><span>crm:</span>{{medico.crm}}</p>
+        <p><span>contato:</span>{{medico.email}}</p>
+      </div>
+    </div>
+  </div>
+  <ng-template #listaVazia>
+    <div class="lista-vazia">
+      <p>Não há médicos a exibir</p>
+    </div>
+  </ng-template>
+</section>

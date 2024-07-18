@@ -1,30 +1,54 @@
 <section class="editar">
-  <div class="editar-cabecalho">
+  <header class="editar-cabecalho">
     <h1>Edição de Paciente</h1>
-  </div>
-  <div class="editar-formulario">
-    <form #f="ngForm" id="formulario" >
+  </header>
+  <main class="editar-formulario">
+    <form [formGroup]="formulario" class="formulario">
       <label for="nome">Nome:</label>
-      <input type="text" name="nome" id="nome" ngModel required #nome="ngModel" minlength="3" placeholder="informe o nome"><br>
-      <div class="editar-erro" *ngIf="nome.invalid && nome.touched || nome.dirty">
-          <app-mensagem *ngIf="nome.errors?.['required']" mensagem="É necessário inserir o nome"></app-mensagem>
-          <app-mensagem *ngIf="nome.errors?.['minlength']" mensagem="O nome precisa ter mais de 3 caracteres"></app-mensagem>
+      <input type="text" formControlName="nome" id="nome"  placeholder="informe o nome" readonly><br>
+      <div class="editar-erro" *ngIf="formulario.get('nome')?.invalid && formulario.get('nome')?.touched" >
+        <app-mensagem *ngIf="formulario.get('nome')?.errors?.['required']" mensagem="O nome precisa ser preenchido"></app-mensagem>
+        <app-mensagem ></app-mensagem>
       </div>
-      <label for="telefone">Telefone:</label>
-      <input type="text" name="telefone" ngModel #telefone="ngModel" id="telefone" required placeholder="informe o número de contato"><br>
-      <div class="editar-erro" *ngIf="telefone.invalid && telefone.touched || telefone.dirty">
-        <app-mensagem *ngIf="telefone.errors?.['required']" mensagem="é necessário inserir um número de telefone"></app-mensagem>
+      <label for="cpf">CPF:</label>
+      <input type="text" formControlName="cpf" id="cpf" readonly>
+      <div class="editar-erro" *ngIf="formulario.get('cpf')?.invalid && formulario.get('cpf')?.touched">
+          <app-mensagem *ngIf="formulario.get('cpf')?.errors?.['required']" mensagem="Necessário o preenchimento de um CPF válido"></app-mensagem>
       </div>
       <label for="email">Email:</label>
-      <input type="email" name="email" id="email" ngModel #email="ngModel"  required email placeholder="informe um e-mail válido"><br>
-      <div class="editar-erro" *ngIf="email.invalid && email.touched || email.dirty">
-          <app-mensagem *ngIf="email.errors?.['required']" mensagem="Necessário inserir e-mail"></app-mensagem>
-          <app-mensagem *ngIf="email.errors?.['email']" mensagem="Formato de E-mail não válido"></app-mensagem>
+      <input type="email" formControlName="email" id="email" placeholder="informe um e-mail válido"><br>
+      <div class="editar-erro" *ngIf="formulario.get('email')?.invalid && formulario.get('email')?.dirty||formulario.get('email')?.touched"  >
+          <app-mensagem *ngIf="formulario.get('email')?.errors?.['required']" mensagem="É necessário o preenchimento de um e-mail" ></app-mensagem>
+          <app-mensagem *ngIf="formulario.get('email')?.errors?.['email']" mensagem="Fornessa um e-mail válido"></app-mensagem>
       </div>
+      <label for="telefone">Telefone:</label>
+      <input type="text" formControlName="telefone"  placeholder="informe o número de contato"><br>
+      <div class="editar-erro" *ngIf="formulario.get('telefone')?.invalid && formulario.get('telefone')?.touched" >
+        <app-mensagem mensagem="É necessário inserir um contato telefonico"></app-mensagem>
+      </div>
+      <label for="cep">CEP:</label>
+      <input type="text" formControlName="cep" id="cep" (blur)="ConsultaCep($event,formulario)">
+      <div class="editar-erro" *ngIf="formulario.get('cep')?.invalid || formulario.get('cep')?.touched">
+          <app-mensagem *ngIf="formulario.get('cep')?.errors?.['required']" mensagem="É necessário inserir um CEP."></app-mensagem>
+          <app-mensagem *ngIf="formulario.get('cep')?.errors?.['pattern']" mensagem="Insira um CEP válido"></app-mensagem>
+      </div>
+      <label for="logradouro">endereço:</label>
+      <input type="text" formControlName="logradouro" id="logradouro" required>
+      <label for="bairro">bairro:</label>
+      <input type="text" formControlName="bairro" id="bairro" required>
+      <label for="numero">número:</label>
+      <input type="text" formControlName="numero" id="numero" required>
+      <div class="editar-erro" *ngIf="formulario.get('numero')?.invalid && formulario.get('numero')?.touched">
+          <app-mensagem *ngIf="formulario.get('numero')?.errors?.['required']" mensagem="É necessário inserir o número da residencia/apartamento"></app-mensagem>
+      </div>
+      <label for="estado">estado:</label>
+      <input type="text" formControlName="estado" id="uf" required>
+      <label for="complemento">Complemento:</label>
+      <input type="text" formControlName="complemento" id="complemento">
     </form>
-  </div>
-  <div class="editar-botao">
-    <button type="submit" [disabled]="f.invalid" (click)="atualizar(f)">Atualizar dados</button>
+  </main>
+  <footer class="editar-botao">
+    <button type="submit" (click)="atualizar(formulario)" [disabled]="formulario.invalid">Atualizar dados</button>
     <button (click)="retornarParaLista()">Cancelar</button>
-  </div>
+  </footer>
 </section>

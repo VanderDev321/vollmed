@@ -24,8 +24,14 @@ export interface Medico {
   nome:string,
   crm:string,
   email:string,
+  telefone:string,
   especialidade:string,
-  ativo:boolean
+  cep:string,
+  logradouro:string,
+  bairro:string,
+  numero:string,
+  estado:string,
+  complemento?:string
 }
 export interface Consulta{
   id:number,

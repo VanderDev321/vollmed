@@ -1,8 +1,9 @@
+import { PacienteServiceService } from './../../../services/pacientes/paciente-service.service';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Paciente } from 'src/app/interfaces/token-interface';
-import { PacienteServiceService } from 'src/app/services/paciente-service.service';
+import { ViaCepService } from 'src/app/services/cep/via-cep.service';
 
 @Component({
   selector: 'app-editar',
@@ -12,33 +13,72 @@ import { PacienteServiceService } from 'src/app/services/paciente-service.servic
 export class EditarComponent implements OnInit {
 
   paciente!:Paciente;
+  formulario!:FormGroup;
 
-  constructor(private router:Router , private service:PacienteServiceService,private route:ActivatedRoute) { }
+  constructor(private router:Router ,
+            private service:PacienteServiceService,
+            private route:ActivatedRoute,
+            private formB:FormBuilder,
+            private cep:ViaCepService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get("id");
     this.service.buscarPorId(parseInt(id!)).subscribe((paciente)=>{
-       this.paciente = paciente;
+      this.formulario = this.transformarEmFormulario(paciente);
+
     })
   }
 
-  atualizar(form: NgForm) {
-    if(form.valid){
-      console.table("informações editadas:", form.value);
+  atualizar(formulario:FormGroup) {
+    if(formulario.valid){
+        this.service.atualizar(formulario.value).subscribe(()=>{
+          alert("Paciente Editado");
+          this.router.navigateByUrl('/paciente');
+        })
     }
  }
  retornarParaLista() {
     this.router.navigateByUrl("/paciente");
   }
 
-  transformarEmFormulario(paciente:Paciente, form:NgForm){
-    form.form.patchValue({
-      nome:paciente.nome,
-      telefone:paciente.telefone,
-      email:paciente.email
+  transformarEmFormulario(paciente:Paciente):FormGroup{
+      this.formulario=this.formB.group({
+        id:[paciente.id],
+        nome:[paciente.nome,Validators.compose([Validators.required])],
+        cpf:[paciente.cpf,Validators.compose([Validators.required])],
+        email:[paciente.email, Validators.compose([Validators.required,Validators.email])],
+        telefone:[paciente.telefone,Validators.compose([Validators.required])],
+        cep:[paciente.cep, Validators.compose([Validators.required])],
+        logradouro:[paciente.logradouro, Validators.compose([Validators.required])],
+        bairro:[paciente.bairro,Validators.compose([Validators.required])],
+        numero:[paciente.numero,Validators.compose([Validators.required])],
+        estado:[paciente.estado,Validators.compose([Validators.required])],
+        complemento:[paciente.complemento]
+      })
+
+      return this.formulario;
+
+  }
+  ConsultaCep(cepEditado:any,form:FormGroup){
+    const cep = cepEditado.target.value;
+    if(cep != ''){
+      this.cep.getConsultaCep(cep).subscribe((endereco)=>{
+          this.preencheForm(endereco,form);
+      });
+    }
+  }
+  preencheForm(endereco: any, form: FormGroup<any>) {
+    form.patchValue({
+      logradouro:endereco.logradouro,
+      bairro:endereco.bairro,
+      numero:'',
+      estado:endereco.uf,
+      complemento:endereco.complemento
+
     })
     return form;
   }
+
 
 
 

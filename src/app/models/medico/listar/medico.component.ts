@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Medico } from 'src/app/interfaces/token-interface';
-import { MedicoServiceService } from 'src/app/services/medico-service.service';
+import { MedicoServiceService } from 'src/app/services/medicos/medico-service.service';
 
 @Component({
   selector: 'app-medico',
@@ -11,21 +12,26 @@ export class MedicoComponent implements OnInit {
 
   listaMedicos: Medico[] = [];
 
-  constructor(private medicoService: MedicoServiceService) { }
+  constructor(private medicoService: MedicoServiceService,
+    private route:Router
+  ) { }
 
   ngOnInit(): void {
     this.medicoService.listar().subscribe(medicos =>{
       console.log(medicos)
       this.listaMedicos = medicos
     }
-    )
-  }
+  )
+}
 
-  editar(){
-    alert("botao editar")
-  }
-  excluir(){
-    alert("botao excluir")
-  }
+editar(){
+  alert("botao editar")
+}
+excluir(){
+  alert("botao excluir")
+}
+adcionarNovo() {
+  this.route.navigateByUrl('/adicionarMedico');
+}
 
 }

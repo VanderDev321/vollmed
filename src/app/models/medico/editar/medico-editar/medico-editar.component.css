@@ -1,0 +1,66 @@
+.main{
+  height: 130vh;
+}
+.cabecalho{
+  display: block;
+  text-align: center;
+  padding:1em;
+}
+.cabecalho h2{
+  font-size:2em;
+  text-transform: uppercase;
+  padding:0.5em;
+}
+.cabecalho h3{
+  font-size: 1.5em;
+  font-weight: 100;
+  margin: 0.3em;
+}
+.cabecalho span{
+  font-weight: 600;
+  margin-right: 0.3em;
+}
+.formulario{
+  height: 90vh;
+}
+.editar-form label {
+    display: block;
+    padding:0.35em;
+    margin-left:40%;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+.editar-form input{
+  margin-left: 40%;
+  width: 25em;
+  display:block;
+  padding: 0.30em;
+  font-size: 0.95em;
+  text-align: center;
+  border:1px groove #e1e1d5;
+  border-radius: 1em;
+}
+.editar-form h3{
+  font-size: 1.3em;
+  margin: 0.8em 0 0.8em 40em;
+}
+.editar-form textarea{
+  margin-left: 40%;
+  border-radius: 1em;
+}
+.acoes{
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0.5em;
+}
+.acoes button{
+  font-size:1.5em;
+  padding:0.5em ;
+  margin-right: 0.35em;
+  border:1px transparent #2e4053;
+  border-radius: 0.5em;
+  box-shadow: 1px 2px 1px #2e4053;
+
+}

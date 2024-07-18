@@ -1,9 +1,7 @@
-import { HttpClientModule } from '@angular/common/http';
-import { Token } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { NgModel,NgForm, FormGroup, FormBuilder, Validators, FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { TokenServiceService } from 'src/app/services/token-service.service';
+import { TokenServiceService } from 'src/app/services/token/token-service.service';
 
 @Component({
   selector: 'app-formulario-login',
