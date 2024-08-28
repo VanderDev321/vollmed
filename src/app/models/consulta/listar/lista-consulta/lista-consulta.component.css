@@ -1,0 +1,68 @@
+.consulta-container{
+  height:100vh ;
+}
+.consulta-cabecalho{
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  margin:1em;
+  text-shadow: 2px 1px 4px grey;
+}
+.acao-nova{
+  display: block;
+  text-align: center;
+  padding:0.5em;
+}
+.novo {
+  font-size: 1.3em;
+  padding: 1em 1.5em;
+  border:1px groove gray ;
+  border-radius: 0.55em;
+}
+.acao-nova >p{
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 550;
+  padding:1em;
+  margin:0.5em;
+
+}
+.lista-todas{
+  display: flex;
+  justify-content: space-evenly;
+}
+.card-consulta{
+  border:1px solid black;
+  width: 25%;
+  text-align: justify;
+  padding:0.5em 3em 0.5em 0.5em;
+  border-radius: 1em;
+  margin:1em;
+  box-shadow: 1px 1px 1em;
+
+}
+.cabecalho-card{
+  font-size: 1em;
+  padding: 0.3em;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+.resposta-card{
+  text-transform: lowercase;
+  font-weight: 100;
+  padding:0.5em;
+
+}
+.especialidade{
+  text-transform: uppercase;
+}
+.listaVazia{
+  display: block;
+  text-align: center;
+  margin-bottom: 1em;
+  padding: 0.75em;
+  font-size: 1.5em;
+}
+

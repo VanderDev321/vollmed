@@ -4,29 +4,61 @@
     <p>Insira as informações: </p>
   </div>
   <div class="formulario">
-    <form>
+    <form #f="ngForm" (ngSubmit)="adicionar(f)">
       <p class="dadosPessoais">Dados pessoais:</p>
       <label for="nome">Nome:</label>
-      <input type="text" name="nome" id="nome" placeholder="insira o nome">
+      <input type="text" name="nome" ngModel required minlength="3" pattern="[A-Za-z ]+" id="nome" #nome="ngModel" placeholder="insira o nome">
+      <div class="erro" *ngIf="nome.invalid && nome.dirty || nome.touched">
+          <app-mensagem *ngIf="nome.errors?.['required']" mensagem="O nome é obrigatório "></app-mensagem><br>
+          <app-mensagem *ngIf="nome.errors?.['minlength']" mensagem="O nome deve possuir o mínimo de 3 caracteres "></app-mensagem><br>
+          <app-mensagem *ngIf="nome.errors?.['pattern']" mensagem="O nome não pode conter números"></app-mensagem>
+      </div>
       <label for="crm">CRM:</label>
-      <input type="text" name="crm" id="crm" placeholder="somente números do crm">
+      <input type="text" name="crm" ngModel id="crm" #crm="ngModel" required minlength="6" maxlength="8" pattern="[1-9]+" placeholder="somente números do crm">
+      <div class="erro" *ngIf="crm.invalid && crm.touched || crm.dirty">
+        <app-mensagem *ngIf="crm.errors?.['required']" mensagem="O CRM deve ser informado"></app-mensagem>
+        <app-mensagem *ngIf="crm.errors?.['minlength']" mensagem="O CRM deve conter no mínimo 6 caracteres"></app-mensagem><br>
+        <app-mensagem *ngIf="crm.errors?.['maxlength']" mensagem="O CRM deve conter no máximo 8 caracteres"></app-mensagem><br>
+        <app-mensagem *ngIf="crm.errors?.['pattern']" mensagem="O CRM não deve contem letras nem caracteres"></app-mensagem>
+      </div>
       <label for="email">e-mail:</label>
-      <input type="text" name="email" id="email" placeholder="insira um e-mail de contato">
+      <input type="text" name="email" ngModel #email="ngModel" email required id="email" placeholder="insira um e-mail de contato">
+      <div class="erro" *ngIf="email.invalid && email.touched || email.dirty">
+          <app-mensagem *ngIf="email.errors?.['required']" mensagem="é necessário inserir o endereço de e-mail"></app-mensagem>
+          <app-mensagem *ngIf="email.errors?.['email']" mensagem="o formato do e-mail está invalido"></app-mensagem>
+      </div>
       <label for="telefone">telefone:</label>
-      <input type="tel" name="telefone" id="telefone" placeholder="(xx)xxxxx-xxxx">
+      <input type="tel" name="telefone" ngModel #telefone="ngModel" required pattern="(\d{2})(\s?)(\d{5})(\-?)(\d{4})$" id="telefone" placeholder="xx xxxxx-xxxx ou xx xxxxx-xxxx">
+      <div class="erro" *ngIf="telefone.invalid && telefone.touched || telefone.dirty">
+        <app-mensagem *ngIf="telefone.errors?.['required']" mensagem="Você deve inserir um número de telefone"></app-mensagem>
+        <app-mensagem *ngIf="telefone.errors?.['pattern']" mensagem="Você deve inserir um telefone válido."></app-mensagem>
+      </div>
       <label for="especialidade">especialidade</label>
-      <input type="text" name="especialidade" id="especialidade" placeholder="especialidade médica">
+      <select name="especialidade" id="especialidade" ngModel #esp="ngModel" required>
+          <option value="GERIATRIA">Geriatria</option>
+          <option value="CLÍNICA MÉDICA">Clínica Médica</option>
+          <option value="GINECOLOGIA">Ginecologia</option>
+          <option value="PEDIATRIA">Pediatria</option>
+          <option value="ORTOPEDIA">Ortopedia</option>
+      </select>
+      <div class="erro" *ngIf="esp.invalid && esp.touched || esp.dirty">
+        <app-mensagem *ngIf="esp.errors?.['required']" mensagem="A especialidade é obrigatória"></app-mensagem>
+      </div>
       <p class="dadosPostais">Endereço:</p>
       <label for="cep">CEP:</label>
-      <input type="text" name="cep" id="cep">
-      <label for="logradouro">Logradouro</label>
-      <input type="text" name="logradouro" id="logradouro">
+      <input type="text" name="cep"  ngModel id="cep" #cep="ngModel" required pattern="(\d{2})(\.?)(\d{3})(-?)(\d{3})$" placeholder="xx.xxx-xxx | xxxxx-xxx | xxxxxxxx" (blur)="buscarCep($event ,f)">
+      <div class="erro" *ngIf="cep.invalid && cep.dirty ||cep.touched">
+          <app-mensagem *ngIf="cep.errors?.['required']" mensagem="O cep é obrigatório"></app-mensagem>
+          <app-mensagem *ngIf="cep.errors?.['pattern']" mensagem="O formato de CEP está inválido"></app-mensagem>
+      </div>
+      <label for="logradouro">Endereço:</label>
+      <input type="text" name="logradouro" ngModel id="logradouro">
       <label for="bairro">Bairro:</label>
-      <input type="text" name="bairro" id="bairro">
+      <input type="text" name="bairro" ngModel id="bairro">
       <label for="numero">número:</label>
-      <input type="text" name="numero" id="numero">
-      <label for="uf">Estado:</label>
-      <select name="uf" id="uf">
+      <input type="text" name="numero" ngModel id="numero">
+      <label for="estado">Estado:</label>
+      <select name="estado" id="uf" ngModel >
         <option value="AC">Acre</option>
         <option value="AL">Alagoas</option>
         <option value="AP">Amapá</option>
@@ -57,9 +89,9 @@
         <option value="EX">Estrangeiro</option>
       </select>
       <label for="complemento">complemento:</label>
-      <textarea name="complemento" id="complemento"></textarea>
+      <textarea name="complemento" id="complemento" ngModel></textarea>
       <div class="acoes">
-        <button type="submit">Enviar Dados</button>
+        <button type="submit" [disabled]="f.invalid">Enviar Dados</button>
         <button (click)="cancelar()">Cancelar</button>
       </div>
     </form>

@@ -11,6 +11,8 @@ import { ViewpacienteComponent } from './views/pacientes/viewpaciente.component'
 import { EditarComponent } from './models/paciente/editar/editar.component';
 import { AdcionarComponent } from './models/medico/adcionar/adcionar.component';
 import { MedicoEditarComponent } from './models/medico/editar/medico-editar/medico-editar.component';
+import { MedicoViewComponent } from './views/medicos/medico-view/medico-view.component';
+import { ListaConsultaComponent } from './models/consulta/listar/lista-consulta/lista-consulta.component';
 
 const routes: Routes = [
   {
@@ -55,8 +57,16 @@ const routes: Routes = [
     component:AdcionarComponent
   },
   {
-    path:"editarMedico",
+    path:"editarMedico/:id",
     component:MedicoEditarComponent
+  },
+  {
+    path:"detalheMedico/:id",
+    component:MedicoViewComponent
+  },
+  {
+    path:"consulta",
+    component: ListaConsultaComponent
   }
 ];
 

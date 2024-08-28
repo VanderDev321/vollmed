@@ -3,8 +3,8 @@
   <button (click)="adcionarNovo()">Adicionar novo</button>
   <h2> Médicos colaboradores: </h2>
   <div class="lista-medico" *ngIf="listaMedicos.length > 0 else listaVazia">
-    <div *ngFor="let medico of listaMedicos" >
-      <div class="card">
+    <div *ngFor="let medico of listaMedicos"  >
+      <div class="card" (click)="editar(medico)" >
         <p><span>nome:</span>{{medico.nome}}</p>
         <p><span>especialidade:</span>{{medico.especialidade}}</p>
         <p><span>crm:</span>{{medico.crm}}</p>

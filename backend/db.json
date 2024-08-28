@@ -85,12 +85,13 @@
       "nome": "Alfred Robert Barbosa",
       "crm": "45566",
       "email": "alfred.robert@vollmed.com",
+      "telefone": "61 94040-2106",
       "especialidade": "clinica médica",
       "cep": "02233444",
       "logradouro": "quadra 14 lote 290 apartamento",
       "bairro": "leste",
       "numero": "500",
-      "estado":"DF",
+      "estado": "DF",
       "complemento": ""
     },
     {
@@ -98,51 +99,72 @@
       "nome": "Magda Schutz Castro",
       "crm": "32366",
       "email": "magda.schutz@vollmed.com",
-      "cep": "33222199",
+      "telefone": "11 99991-8085",
       "especialidade": "ginecologia",
+      "cep": "33222199",
       "logradouro": "Rua Espinoza lote 1023 apartamento ",
       "bairro": "centro",
       "numero": "333",
-      "estado":"GO",
-      "complemento":""
+      "estado": "GO",
+      "complemento": ""
     },
     {
       "id": "3",
       "nome": "Alberian Potter Clinff",
       "crm": "72312",
       "email": "alberian.potter@vollmed.com",
+      "telefone": "27 98640-2113",
       "especialidade": "ortopedia",
       "cep": "02233779",
       "logradouro": "quadra 99 lote 33 apartamento",
       "bairro": "noroeste",
       "numero": "235",
-      "estado":"ES",
-      "complemento":""
+      "estado": "ES",
+      "complemento": "centro"
     },
     {
       "id": "4",
       "nome": "Stefanny Azevedo Queiroz",
       "crm": "66798",
       "email": "stefanny.azevedo@vollmed.com",
+      "telefone": "98 98877-6655",
       "especialidade": "pediatria",
       "cep": "72723093",
       "logradouro": "Condominio 26 de setembro lote 393 casa",
       "bairro": "centro",
       "numero": "666",
-      "estado":"MA",
-      "complemento":""
-
+      "estado": "MA",
+      "complemento": ""
     }
   ],
   "consultas": [
     {
       "id": "1",
       "especialidade": "ortopedia",
-      "paciente-id": "1",
-      "medico-id": "3",
+      "paciente": "1",
+      "medico": "2",
       "data": "23/04/2024 - 08:00:00h",
       "ativo": true,
       "motivo-cancelamento": ""
+    },
+    {
+      "id":"2",
+      "especialidade":"clinica médica",
+      "paciente":"3",
+      "medico":"1",
+      "data":"25/08/2024 - 13:00:00h",
+      "ativo":true,
+      "motivo-cancelamento":""
+    },
+    {
+      "id":"3",
+      "especialidade":"ortopedia",
+      "paciente":"5",
+      "medico":"4",
+      "data":"30/08/2024 - 13:00:00h",
+      "ativo":true,
+      "motivo-cancelamento":""
+
     }
   ],
   "token": [

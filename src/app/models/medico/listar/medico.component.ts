@@ -24,11 +24,8 @@ export class MedicoComponent implements OnInit {
   )
 }
 
-editar(){
-  alert("botao editar")
-}
-excluir(){
-  alert("botao excluir")
+editar(medico:Medico){
+    this.route.navigateByUrl(`detalheMedico/${medico.id}`);
 }
 adcionarNovo() {
   this.route.navigateByUrl('/adicionarMedico');

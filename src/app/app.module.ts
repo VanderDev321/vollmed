@@ -17,6 +17,9 @@ import { FormularioAdicionarComponent } from './models/paciente/adicionar/formul
 import { EditarComponent } from './models/paciente/editar/editar.component';
 import { AdcionarComponent } from './models/medico/adcionar/adcionar.component';
 import { MedicoEditarComponent } from './models/medico/editar/medico-editar/medico-editar.component';
+import { MedicoViewComponent } from './views/medicos/medico-view/medico-view.component';
+import { ConsultaViewComponent } from './views/consulta/consulta-view/consulta-view.component';
+import { ListaConsultaComponent } from './models/consulta/listar/lista-consulta/lista-consulta.component';
 
 
 
@@ -35,7 +38,10 @@ import { MedicoEditarComponent } from './models/medico/editar/medico-editar/medi
     FormularioAdicionarComponent,
     EditarComponent,
     AdcionarComponent,
-    MedicoEditarComponent
+    MedicoEditarComponent,
+    MedicoViewComponent,
+    ConsultaViewComponent,
+    ListaConsultaComponent
   ],
   imports: [
     BrowserModule,

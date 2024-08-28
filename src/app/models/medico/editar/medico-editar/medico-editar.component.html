@@ -1,30 +1,30 @@
 <section class="main">
   <div class="cabecalho">
     <h2>Edição de informações</h2>
-    <h3><span>Nome:</span>Josué Francisco Neves</h3>
-    <h3><span>CPF:</span>123.456.789-10</h3>
+    <h3><span>Nome:</span>{{medico.nome}}</h3>
+    <h3><span>CRM:</span>{{medico.crm}}</h3>
   </div>
-  <div class="formulario">
-    <form class="editar-form">
+  <div class="formulario" >
+    <form class="editar-form" [formGroup]="formulario">
       <label for="email">E-mail:</label>
-      <input type="text" name="email" id="email">
+      <input type="text" formControlName="email" id="email">
       <label for="telefone">Telefone:</label>
-      <input type="text" name="telefone" id="telefone">
+      <input type="text" formControlName="telefone" id="telefone">
       <h3>Informações de endereço:</h3>
       <label for="cep">CEP:</label>
-      <input type="text" name="cep" id="cep">
+      <input type="text" formControlName="cep" id="cep">
       <label for="logradouro">Endereço:</label>
-      <input type="text" name="logradouro" id="logradouro">
+      <input type="text" formControlName="logradouro" id="logradouro">
       <label for="bairro">Bairro:</label>
-      <input type="text" name="bairro" id="bairro">
+      <input type="text" formControlName="bairro" id="bairro">
       <label for="numero">Número:</label>
-      <input type="text" name="numero" id="numero">
-      <label for="uf">Estado:</label>
-      <input type="text" name="uf" id="uf">
+      <input type="text" formControlName="numero" id="numero">
+      <label for="estado">Estado:</label>
+      <input type="text" formControlName="estado" id="uf">
       <label for="complemento">Complemento:</label>
-      <textarea name="complemento" id="complemento" cols="53" rows="7"></textarea>
+      <textarea formControlName="complemento" id="complemento" cols="53" rows="7"></textarea>
       <div class="acoes">
-        <button (click)="editar()">Confirmar</button>
+        <button (click)="editar(formulario)" [disabled]="formulario.invalid">Confirmar</button>
         <button (click)="cancelar()">Cancelar</button>
       </div>
 

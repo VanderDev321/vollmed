@@ -20,9 +20,9 @@ export class ContasComponent implements OnInit {
   buscarMedicos(){
     this.router.navigate(['/medico'])
   }
-  
+
   buscarConsultas(){
-    console.log("consultas");
+    this.router.navigate(['/consulta']);
   }
 
 }

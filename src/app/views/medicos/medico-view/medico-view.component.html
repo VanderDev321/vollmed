@@ -1,0 +1,28 @@
+<section class="container-detalhe">
+  <div class="cabecalho">
+    <h2>Informações do médico:</h2>
+  </div>
+  <div class="card">
+    <h2>Dados Pessoais:</h2>
+    <p><span class="label">nome:</span>{{medico.nome}}</p>
+    <p><span class="label">CRM:</span>{{medico.crm}}</p>
+    <p><span class="label">Especialidade:</span>{{medico.especialidade}}</p>
+    <h2>Contatos:</h2>
+    <p><span class="label">telefone:</span>{{medico.telefone}}</p>
+    <p><span class="label">email:</span>{{medico.email}}</p>
+    <h2>Endereço:</h2>
+    <p><span class="label">cep:</span>{{medico.cep}}</p>
+    <p><span class="label">logradouro:</span>{{medico.logradouro}} </p>
+    <p><span class="label">bairro:</span>{{medico.bairro}}</p>
+    <p><span class="label">número:</span>{{medico.numero}}</p>
+    <p><span class="label">estado:</span>{{medico.estado}}</p>
+    <p><span class="label">complemento:</span>{{medico.complemento}}</p>
+    <div class="acoes">
+        <img src="/../assets/imagens/icone-editar.png" alt="ícone de editar" routerLink="/editarMedico/{{medico.id}}">
+        <img src="/../assets/imagens/icone-excluir.png" alt="ícone de excluir"(click)="excluir(medico.id)">
+    </div>
+  </div>
+  <div class="botao-view">
+    <button (click)="retornarLista()">Retornar</button>
+  </div>
+</section>
