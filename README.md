@@ -1,5 +1,9 @@
 # Vollmed
 
+Projeto fictício de uma aplicação web de uma clínica médica. O objetivo futuro é o consumo de uma API criada em JAVA com SpringBoot. Nesta aplicação as funcionalidades principais são: listagem de pacientes, médicos e consultas, cadastramento de novos pacientes e médicos , criação de novas consultas, exclusão de pacientes , médicos e consultas. 
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.7.
 
 ## Development server
