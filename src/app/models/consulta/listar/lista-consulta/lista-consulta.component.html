@@ -3,19 +3,17 @@
     <h1>seção de consultas</h1>
   </div>
   <div class="acao-nova">
-    <button class="novo">Agendar nova</button>
+    <button class="novo" (click)="adicionarNova()">Agendar nova</button>
     <p>consultas agendadas:</p>
   </div>
 
-  <div class="lista-todas" *ngIf="listaConsulta.length > 0 else listaVazia">
-    <div class="card-consulta" *ngFor="let consulta of listaConsulta">
+  <div class="lista-todas" *ngIf="listaConsultasAtivas.length > 0 else listaVazia">
+    <div class="card-consulta" *ngFor="let consulta of listaConsultasAtivas" routerLink="/detalheConsulta/{{consulta.id}}">
       <p class="cabecalho-card">Especialidade:<span class="resposta-card especialidade">{{consulta.especialidade}}</span></p>
       <p class="cabecalho-card">Data:<span class="resposta-card">{{consulta.data}}</span></p>
-      <p class="cabecalho-card">Horário:<span class="resposta-card">08:00Hr</span></p>
-      <div>
-        <p class="cabecalho-card">Médico:<span class="resposta-card">{{medico.nome}}</span></p>
-        <p class="cabecalho-card">Paciente:<span class="resposta-card">{{paciente.nome}}</span></p>
-      </div>
+      <p class="cabecalho-card">Horário:<span class="resposta-card">{{consulta.hora}}</span></p>
+      <p class="cabecalho-card">Médico:<span class="resposta-card">{{consulta.medico}}</span></p>
+      <p class="cabecalho-card">Paciente:<span class="resposta-card">{{consulta.paciente}}</span></p>
     </div>
   </div>
   <ng-template #listaVazia>

@@ -6,7 +6,7 @@
       "cpf": "12345678910",
       "email": "fulano@email.com",
       "telefone": "(61)99999-8888",
-      "cep": 72309310,
+      "cep": "72309310",
       "logradouro": "QR 321 Conjunto 10",
       "bairro": "Samambaia Sul (Samambaia)",
       "numero": "18",
@@ -37,7 +37,7 @@
       "bairro": "oeste",
       "numero": "153",
       "estado": "DF",
-      "complemento": null
+      "complemento": ""
     },
     {
       "id": "5",
@@ -51,32 +51,6 @@
       "numero": "503",
       "estado": "MA",
       "complemento": "apartamento 212"
-    },
-    {
-      "id": "6",
-      "nome": "Jonas Marcelo de Oliveira",
-      "cpf": "04579699900",
-      "email": "jonas.marcel@email.com",
-      "telefone": "(11)99644-1800",
-      "cep": "01001-000",
-      "logradouro": "Praça da Sé",
-      "bairro": "Sé",
-      "numero": "45",
-      "estado": "SP",
-      "complemento": "lado ímpar"
-    },
-    {
-      "id": "7",
-      "nome": "Maria Anita Teles Maia",
-      "cpf": "50419390120",
-      "email": "anita.teles.maia@gmail.com",
-      "telefone": "(61)99687-3037",
-      "cep": "72309309",
-      "logradouro": "QR 321 Conjunto 9",
-      "bairro": "Samambaia Sul (Samambaia)",
-      "numero": "16",
-      "estado": "DF",
-      "complemento": "casa"
     }
   ],
   "medicos": [
@@ -141,30 +115,36 @@
     {
       "id": "1",
       "especialidade": "ortopedia",
-      "paciente": "1",
-      "medico": "2",
-      "data": "23/04/2024 - 08:00:00h",
+      "paciente": "José Francisco Castro",
+      "medico": "Alberian Potter Clinff",
+      "data": "23/04/2024",
+      "hora": "08:00:00h",
       "ativo": true,
-      "motivo-cancelamento": ""
+      "motivoCancelamento": {
+        "motivo-cancelamento": "outros"
+      }
     },
     {
-      "id":"2",
-      "especialidade":"clinica médica",
-      "paciente":"3",
-      "medico":"1",
-      "data":"25/08/2024 - 13:00:00h",
-      "ativo":true,
-      "motivo-cancelamento":""
+      "id": "2",
+      "especialidade": "clinica médica",
+      "paciente": "Jéssica Castro Alves",
+      "medico": "Alfred Robert Barbosa",
+      "data": "25/08/2024 ",
+      "hora": " 13:00:00h",
+      "ativo": true,
+      "motivoCancelamento": {
+        "motivo-cancelamento": "médico cancelou"
+      }
     },
     {
-      "id":"3",
-      "especialidade":"ortopedia",
-      "paciente":"5",
-      "medico":"4",
-      "data":"30/08/2024 - 13:00:00h",
-      "ativo":true,
-      "motivo-cancelamento":""
-
+      "id": "3",
+      "especialidade": "ginecologia",
+      "paciente": "Francisca das Neves",
+      "medico": "Magda Schutz Castro",
+      "data": "30/08/2024",
+      "hora": "14:00:00h",
+      "ativo": true,
+      "motivoCancelamento": ""
     }
   ],
   "token": [

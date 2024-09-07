@@ -1,1 +1,34 @@
-<p>consulta-view works!</p>
+<section class="card-view">
+  <div class="cabecalho">
+    <h1>informações da consulta:</h1>
+  </div>
+  <div class="dados-consulta">
+    <p class="informacao"><span class="label">Agendada para:</span>{{consulta.data}}</p>
+    <p class="informacao"><span class="label">Horário:</span>{{consulta.hora}}</p>
+    <p class="informacao"><span class="label">Médico responsável:</span>{{consulta.medico}}</p>
+    <p class="informacao"><span class="label">Paciente:</span>{{consulta.paciente}}</p>
+    <p class="informacao especialidade"><span class="label">Especialidade:</span>{{consulta.especialidade}}</p>
+    <div class="acoes">
+      <button class="acao-cancelar"  (click)="mostraCardCancelamento(botaoClicado)">{{acaoBotao}}</button>
+      <button class="acao-reagendar"(click)="editarConsulta()">Reagendar</button>
+    </div>
+  </div>
+  <div class="card-cancelamento-{{acaoCard}}">
+    <form class="form-cancelamento" #f="ngForm" (ngSubmit)="cancelarConsulta()">
+      <label for="motivoCancelamento">Selecione o motivo do cancelamento:</label>
+      <select name="motivoCancelamento" ngModel #motivo="ngModel" required class="cancelamento" id="">
+        <option value="paciente desistiu">paciente desistiu</option>
+        <option value="médico cancelou">médico cancelou</option>
+        <option value="outros">outros</option>
+      </select>
+      <div *ngIf="motivo.invalid ">
+          <app-mensagem *ngIf="motivo.errors?.['required']" mensagem="O motivo deve ser selecionado."></app-mensagem>
+      </div>
+      <button type="submit" [disabled]="motivo.invalid" (click)="inserirMotivoDeCancelamento(f)">confirmar</button>
+    </form>
+  </div>
+  <div class="acao-retornar">
+    <button (click)="listarTodas()">Listar Todas</button>
+  </div>
+
+</section>

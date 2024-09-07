@@ -1,0 +1,81 @@
+.card-view{
+  height: 100vh;
+}
+.cabecalho{
+  text-align: center;
+  font-size: 1.5em;
+  padding:0.70em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 3px gray;
+  margin-bottom: 2.3em;
+}
+.dados-consulta{
+  border:2px solid black;
+  border-radius: 1.3em;
+  width: 30%;
+  margin-left: 35%;
+  font-size: 1.4em;
+  box-shadow: 0.5em 0.8em 0.5em ;
+}
+.informacao{
+  margin:0.5em 0.3em 1em 1.7em;
+}
+.label{
+  margin-right: 0.5em;
+  font-weight: 600;
+}
+.acoes{
+  text-align: right;
+  margin-right: 1em;
+  padding-bottom: 0.35em;
+}
+.acao-cancelar ,.acao-reagendar{
+  font-size: 0.75em;
+  padding: 0.5em;
+  margin-left: 0.3em;
+  border-radius: 0.5em;
+  text-transform: lowercase;
+}
+.form-cancelamento{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:1.5em 0.5em 0.5em 0;
+}
+.card-cancelamento-open{
+  display:contents;
+}
+.card-cancelamento-close {
+  display: none;
+}
+.cancelamento{
+  font-size: 1.3em;
+  text-align: justify;
+  margin-bottom: 0.5em;
+  border-radius: 3em;
+  padding:0.3em;
+}
+.form-cancelamento label{
+  font-size:1.5em;
+  margin:0.5em;
+}
+.form-cancelamento button{
+  font-size: 1.5em;
+  padding:0.3em;
+  border:1px solid #cbcbcb;
+  border-radius: 0.3em;
+  margin-top: 0.5em;
+}
+.acao-retornar{
+  padding: 1em;
+  margin-top: 2em;
+  font-size:1.7em;
+  text-align: center;
+
+}
+.acao-retornar button{
+  padding:0.7em;
+  font-size: 1.2em;
+  border-radius: 3em;
+}
+

@@ -36,9 +36,10 @@ export interface Medico {
 export interface Consulta{
   id:number,
   especialidade:string,
-  paciente:number;
-  medico:number,
+  paciente:string;
+  medico:string,
   data:Date,
+  hora:Date,
   ativo:boolean,
   motivoCancelamento:string
 }
