@@ -1,0 +1,74 @@
+.consulta-nova{
+  height: 150vh;
+}
+.cabecalho-nova{
+  display: block;
+  text-align: center;
+  padding: 1em;
+}
+.cabecalho-nova h1 {
+  font-size: 2em;
+  margin-bottom:1em ;
+  text-shadow: 1px 3px 1px gray;
+  text-transform: uppercase;
+}
+.card-nova p{
+  font-size: 1.5em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.nova-consulta{
+  display: block;
+}
+.nova-consulta span{
+  text-transform: uppercase;
+}
+
+.nova-consulta label{
+  display: block;
+  font-size:1.35em;
+  margin-left: 35%;
+  padding:0.3em;
+}
+.nova-consulta input{
+  margin-left:35%;
+  margin-bottom: 1em;
+  text-align: center;
+  border:1px thin #1a2421;
+  border-radius: 1em;
+  width: 30%;
+  padding:0.5em 0.5em 0.3em 0.5em;
+}
+.hora{
+  width: 30%;
+}
+.nova-consulta select{
+  border-radius: 1em;
+  text-align: center;
+  padding:0.6em;
+  margin-left: 35%;
+  margin-bottom: 1em;
+  margin-top:0.5em;
+}
+.acoes{
+  display: flex;
+  margin:1.2em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.acoes button{
+  font-size:1.5em;
+  padding:0.5em;
+  margin-right: 0.5em;
+  border:1px groove #5c6473;
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 2px black;
+}
+.erro{
+  font-size: small;
+  font-weight: 500;
+  text-align: center;
+  color:red;
+}

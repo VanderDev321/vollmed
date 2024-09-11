@@ -1,36 +1,62 @@
 <section class="consulta-nova">
   <div class="cabecalho-nova">
-    <h1>Nova Consulta</h1>
+    <h1>Adicionar Nova Consulta</h1>
   </div>
   <div class="card-nova">
     <p>Insira as informações para agendamento de nova consulta:</p>
     <div class="formulario-nova">
-      <form class="nova-consulta">
+      <form class="nova-consulta" #f="ngForm">
         <label for="cpfPaciente"><span>cpf</span> do paciente:</label>
-        <input type="text" name="cpfPaciente">
+        <input type="text" name="cpfPaciente" ngModel required pattern="\d{3}.\d{3}.\d{3}\-\d{2}" #cpf="ngModel" placeholder="xxx.xxx.xxx-xx">
+        <div class="erro" *ngIf="cpf.invalid && cpf.dirty || cpf.touched">
+            <app-mensagem *ngIf="cpf.errors?.['required']" mensagem="o CPF deve ser inserido"></app-mensagem>
+            <app-mensagem *ngIf="cpf.errors?.['pattern']" mensagem="o preenchimento deve seguir o padrão requirido: xxx.xxx.xxx-xx"></app-mensagem>
+        </div>
         <label for="nomePaciente">nome do paciente:</label>
-        <input type="text" name="nomePaciente" id="">
-        <label for="crmMedico"><span>crm</span>do médico:</label>
-        <input type="text" name="crmMedico">
+        <input type="text" name="nomePaciente" ngModel required pattern="\D+" #nomeP="ngModel" placeholder="insira o nome ">
+        <div class="erro" *ngIf="nomeP.invalid && nomeP.touched || nomeP.dirty">
+            <app-mensagem *ngIf="nomeP.errors?.['required']" mensagem="o nome deve ser preenchido"></app-mensagem>
+            <app-mensagem *ngIf="nomeP.errors?.['pattern']" mensagem="somente letras"></app-mensagem>
+        </div>
+        <label for="crmMedico"><span>crm</span> do médico:</label>
+        <input type="text" name="crmMedico" ngModel required  pattern="\d{5,6}$" #crm="ngModel" placeholder="xxxxx ou xxxxxx">
+        <div class="erro" *ngIf="crm.invalid && crm.touched || crm.dirty">
+            <app-mensagem *ngIf="crm.errors?.['required']" mensagem="o número de CRM deve ser preenchido"></app-mensagem>
+            <app-mensagem *ngIf="crm.errors?.['pattern']" mensagem="somente números é permitido - padrão: xxxxx ou xxxxxx"></app-mensagem>
+        </div>
+        <label for="nomeMedico">nome do médico:</label>
+        <input type="text" name="nomeMedico" ngModel required pattern="\D+" #nomeM="ngModel" placeholder="insira o nome ">
+        <div class="erro" *ngIf="nomeM.invalid && nomeM.touched || nomeM.dirty">
+            <app-mensagem *ngIf="nomeM.errors?.['required']" mensagem="o nome do médico deve ser preenchido"></app-mensagem>
+            <app-mensagem *ngIf="nomeM.errors?.['pattern']" mensagem="somente letras"></app-mensagem>
+        </div>
         <label for="dataConsulta">selecione a data:</label>
-        <input type="date" name="dataConsulta" id="">
+        <input type="date" name="dataConsulta"  ngModel required #data="ngModel">
+        <div class="erro" *ngIf="data.invalid && data.touched">
+            <app-mensagem *ngIf="data.errors?.['required']" mensagem="a data é necessária e obrigatória"></app-mensagem>
+        </div>
         <label for="horaConsulta">selecione a hora:</label>
-        <input type="time" name="horaConsulta" id="">
+        <input type="time" name="horaConsulta" class="hora" ngModel required #hora="ngModel">
+        <div class="erro" *ngIf="hora.invalid && hora.touched">
+            <app-mensagem *ngIf="hora.errors?.['required']" mensagem="selecionar a hora é obrigatório"></app-mensagem>
+        </div>
         <label for="especialidadeConsulta">Especialidade:</label>
-        <select name="especialidadeConsulta" id="">
+        <select name="especialidadeConsulta" ngModel required #espec ="ngModel">
           <option value="GERIATRIA">Geriatria</option>
           <option value="CLÍNICA MÉDICA">Clínica Médica</option>
           <option value="GINECOLOGIA">Ginecologia</option>
           <option value="PEDIATRIA">Pediatria</option>
           <option value="ORTOPEDIA">Ortopedia</option>
         </select>
+        <div class="erro" *ngIf="espec.invalid && espec.touched">
+            <app-mensagem *ngIf="espec.errors?.['required']" mensagem="a especialidade é obrigatória"></app-mensagem>
+        </div>
         <div class="acoes">
-          <button>Enviar</button>
+          <button [disabled]="f.invalid" (click)="criarNova(f)">Enviar</button>
+          <button (click)="listarTodas()">Cancelar</button>
         </div>
       </form>
-      <div class="listar-todos">
-        <button>Cancelar</button>
-      </div>
+
     </div>
   </div>
 </section>

@@ -9,7 +9,7 @@ import { Consulta } from 'src/app/interfaces/token-interface';
 })
 export class ConsultaServiceService {
 
-  readonly URL = "http://localhost:3000/consultas";
+  private readonly URL = "http://localhost:3000/consultas";
 
   constructor(private http:HttpClient,
     private router:Router
@@ -19,6 +19,9 @@ export class ConsultaServiceService {
   listar():Observable<Consulta[]>{
 
     return this.http.get<Consulta[]>(this.URL);
+  }
+  criar(consulta:Consulta){
+    return this.http.post<Consulta>(this.URL,consulta);
   }
 
   editar(consulta:Consulta){
