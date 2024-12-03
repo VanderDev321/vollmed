@@ -1,66 +1,59 @@
+
 .box{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 150vh;
-  min-height: 100vh;
+ text-align: center;
+ display: block;
+ height: 150vh;
 }
 .cabecalho{
-  padding: 1em 0 1em 0;
-  font-size: 1.30em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin:0.5em;
+}
+.filtro{
+  text-align: center;
+  padding: 0.5em;
+}
+.filtro input{
+  width: 20%;
+  border:1px solid #dcd9d1;
+  border-radius: 1em;
+  padding:0.5em 0.7em;
+  text-align: center;
 }
 .botao{
-  font-size: 1.15em;
-  padding:1em 1.35em 1em 1.35em;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 0.35em 1em;
+  border: none;
   margin-bottom: 1em;
-  border:2px solid #C0C0C0;
-  border-radius: 5px;
+}
+.card{
+  display: inline-block;
+  font-size: 1.5em;
+  margin:0.5em;
+  padding:0.35em;
+  overflow-y: auto;
+}
+table,th{
+  border:2px groove black;
+  border-collapse: collapse;
+  padding: 0.7em;
+  text-align: center;
+  width: 40em;
+
+}
+th{
+  background-color: #368e87;
 }
 
-.card{
-  font-size: 1.2em;
-  margin-bottom: 1em;
-  margin-left: 0.55em;
-  border: 2px groove black;
-  padding:2em;
-  border-radius: 1em;
-  box-shadow: 2.5px 5px;
+td{
+  border-bottom: 1px solid black;
+  padding:0.6em;
   cursor: pointer;
 }
-.card p{
-  padding:0.25em;
+.voltar button{
+  border-radius: 2rem;
+  font-size: 1em;
+  padding:0.2em 1em;
 }
-.lista-pacientes{
-  display:flex;
-  flex-flow: row wrap;
-  align-content: space-evenly;
-  align-items: auto;
-  margin: 2.5em;
-}
-.lista-pacientes p {
-  text-transform: capitalize;
-}
-.lista-pacientes h1{
-  margin:1em;
-}
-.lista-pacientes span{
-  font-weight: 800;
-}
-.lista-pacientes img{
-  position: relative;
-  margin-right: 0.3em;
-  left: 10em;
-}
-.lista-vazia{
-    display: block;
-    text-align: center;
-    margin-bottom: 1em;
-    padding: 0.75em;
-    font-size: 1.5em;
-}
-
-
-
-
-
 

@@ -1,8 +1,9 @@
-<div class="main">
-  <div  ngClass="formulario-aberto">
-    <p>Insira as informações do Paciente</p>
-    <button class="botao" (click)="retornarParaLista()">Cancelar</button>
-    <div class="formulario">
+<div class="adicionar-container">
+  <div  ngClass="cabecalho">
+    <h2>Adicionar novo paciente</h2>
+    <p>Insira as informações do paciente</p>
+  </div>
+  <div class="formulario">
       <form #f="ngForm" (ngSubmit)="novo(f)" >
 
         <label for="nome">Nome:</label>
@@ -99,8 +100,10 @@
         </div>
         <label for="complemento">Complemento:</label>
         <input type="text" name="complemento" ngModel #complemento="ngModel" placeholder="informações adicionais">
-        <button type="submit" [disabled]="f.invalid">Enviar dados</button>
+        <div class="acoes">
+          <button class="botao" (click)="retornarParaLista()">Cancelar</button>
+          <button class ="botao" type="submit" [disabled]="f.invalid">Enviar dados</button>
+        </div>
       </form>
     </div>
   </div>
-</div>

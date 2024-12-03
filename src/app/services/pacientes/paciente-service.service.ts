@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Paciente } from '../../interfaces/token-interface';
@@ -32,6 +32,13 @@ export class PacienteServiceService {
   buscarPorId(id:number):Observable<Paciente>{
     const url = `${this.url}/${id}`;
     return this.httpCliente.get<Paciente>(url);
+  }
+  buscarPorCPF(cpf:string):Observable<Paciente[]>{
+    console.log("numero: "+cpf)
+    let param = new HttpParams().set("cpf",cpf);
+
+    return this.httpCliente.get<Paciente[]>(this.url,{params:param});
+
   }
 
 }

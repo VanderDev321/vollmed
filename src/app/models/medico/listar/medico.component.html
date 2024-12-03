@@ -1,20 +1,46 @@
-<section class="container-medico">
-  <h1>Sessão de médicos</h1>
-  <button (click)="adcionarNovo()">Adicionar novo</button>
-  <h2> Médicos colaboradores: </h2>
-  <div class="lista-medico" *ngIf="listaMedicos.length > 0 else listaVazia">
-    <div *ngFor="let medico of listaMedicos"  >
-      <div class="card" (click)="editar(medico)" >
-        <p><span>nome:</span>{{medico.nome}}</p>
-        <p><span>especialidade:</span>{{medico.especialidade}}</p>
-        <p><span>crm:</span>{{medico.crm}}</p>
-        <p><span>contato:</span>{{medico.email}}</p>
+<section class="box">
+  <div class="cabecalho">
+    <h1>Seção de médicos</h1>
+  </div>
+  <div>
+    <button class="botao" (click)="adicionarNovo()">novo</button>
+  </div>
+  <h1>Lista de medicos:</h1>
+  <div class="filtro">
+    <input name="filtro" type="text" placeholder="buscar nome" (blur)="buscaPaciente($event)">
+  </div>
+  <div
+    class="lista-pacientes"
+    *ngIf="listaMedicos.length > 0; else listaVazia"
+  >
+    <div>
+      <div class="card">
+        <table>
+          <thead >
+            <tr class="linha">
+              <th>nome</th>
+              <th>telefone</th>
+              <th>especialidade</th>
+            </tr>
+          </thead>
+          <tbody  *ngFor="let medico of listaMedicos"
+          routerLink="/detalheMedico/{{ medico.id }}">
+            <tr class="coluna">
+              <td>{{medico.nome}}</td>
+              <td>{{medico.telefone}}</td>
+              <td class="especialidade">{{medico.especialidade}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
   <ng-template #listaVazia>
     <div class="lista-vazia">
-      <p>Não há médicos a exibir</p>
+      <p>Não há pacientes a exibir!</p>
     </div>
   </ng-template>
+  <div class="voltar">
+    <button routerLink="/contas">todos perfis</button>
+  </div>
 </section>

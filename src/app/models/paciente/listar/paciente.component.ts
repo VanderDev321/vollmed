@@ -24,6 +24,11 @@ export class PacienteComponent implements OnInit {
 
   }
 
+    buscaPaciente(nome:any){
+      const digitado = nome.target.value;
+      alert(`buscou por: ${digitado}`);
+    }
+
     adicionarNovo() {
       this.router.navigate(["/adicionarPaciente"]);
       }

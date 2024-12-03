@@ -1,17 +1,38 @@
 <section class="box">
   <div class="cabecalho">
-    <h1>Seção de pacientes: </h1>
+    <h1>Seção de pacientes</h1>
   </div>
-    <button class="botao" (click)="adicionarNovo()">Adicionar Paciente</button>
-  <h1>Lista de pacientes: </h1>
-  <div class="lista-pacientes" *ngIf="listaPacientes.length > 0 else listaVazia" >
-
-    <div  *ngFor="let paciente of listaPacientes" routerLink="/detalhePaciente/{{paciente.id}}">
-        <div class="card">
-          <p><span>Nome</span>: {{paciente.nome}}</p>
-          <p><span>cpf</span>: {{paciente.cpf}}</p>
-          <p><span>telefone</span>: {{paciente.telefone}}</p>
-        </div>
+  <div>
+    <button class="botao" (click)="adicionarNovo()">novo</button>
+  </div>
+  <h1>Lista de pacientes:</h1>
+  <div class="filtro">
+    <input name="filtro" type="text" placeholder="buscar nome" (blur)="buscaPaciente($event)">
+  </div>
+  <div
+    class="lista-pacientes"
+    *ngIf="listaPacientes.length > 0; else listaVazia"
+  >
+    <div>
+      <div class="card">
+        <table>
+          <thead >
+            <tr class="linha">
+              <th>Nome</th>
+              <th>CPF</th>
+              <th>Telefone</th>
+            </tr>
+          </thead>
+          <tbody  *ngFor="let paciente of listaPacientes"
+          routerLink="/detalhePaciente/{{ paciente.id }}">
+            <tr class="coluna">
+              <td>{{paciente.nome}}</td>
+              <td>{{paciente.cpf}}</td>
+              <td>{{paciente.telefone}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
   <ng-template #listaVazia>
@@ -19,4 +40,7 @@
       <p>Não há pacientes a exibir!</p>
     </div>
   </ng-template>
+  <div class="voltar">
+    <button routerLink="/contas">todos perfis</button>
+  </div>
 </section>

@@ -24,12 +24,13 @@ export class EditarComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get("id");
     this.service.buscarPorId(parseInt(id!)).subscribe((paciente)=>{
+      this.paciente = paciente;
       this.formulario = this.transformarEmFormulario(paciente);
 
     })
   }
 
-  atualizar(formulario:FormGroup) {
+  editar(formulario:FormGroup) {
     if(formulario.valid){
         this.service.atualizar(formulario.value).subscribe(()=>{
           alert("Paciente Editado");
@@ -37,6 +38,9 @@ export class EditarComponent implements OnInit {
         })
     }
  }
+  cancelar(){
+    this.retornarParaLista();
+  }
  retornarParaLista() {
     this.router.navigateByUrl("/paciente");
   }
@@ -65,6 +69,8 @@ export class EditarComponent implements OnInit {
       this.cep.getConsultaCep(cep).subscribe((endereco)=>{
           this.preencheForm(endereco,form);
       });
+    }else{
+      throw  Error();
     }
   }
   preencheForm(endereco: any, form: FormGroup<any>) {
@@ -77,6 +83,10 @@ export class EditarComponent implements OnInit {
 
     })
     return form;
+  }
+
+  verificaResposta(objeto:any){
+    console.log(objeto);
   }
 
 

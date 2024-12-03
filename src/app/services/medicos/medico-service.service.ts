@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Medico } from '../../interfaces/token-interface';
@@ -7,6 +7,7 @@ import { Medico } from '../../interfaces/token-interface';
   providedIn: 'root'
 })
 export class MedicoServiceService {
+
 
   private readonly URL = "http://localhost:3000/medicos";
 
@@ -29,6 +30,10 @@ export class MedicoServiceService {
     const urlBusca =`${this.URL}/${id}`;
     return this.httpCliente.get<Medico>(urlBusca);
 
+  }
+  buscarPorEspecialidade(especialidadecapturada: any):Observable<Medico[]> {
+      let param = new HttpParams().set('especialidade',especialidadecapturada);
+      return this.httpCliente.get<Medico[]>(this.URL,{params:param});
   }
   excluir(id:number){
     const urlDelecao = `${this.URL}/${id}`;

@@ -21,6 +21,7 @@ import { MedicoViewComponent } from './views/medicos/medico-view/medico-view.com
 import { ConsultaViewComponent } from './views/consulta/consulta-view/consulta-view.component';
 import { ListaConsultaComponent } from './models/consulta/listar/lista-consulta/lista-consulta.component';
 import { AdicionarConsultaComponent } from './models/consulta/adicionar/adicionar-consulta/adicionar-consulta.component';
+import { EnderecoComponent } from './models/endereco/endereco.component';
 
 
 
@@ -43,7 +44,8 @@ import { AdicionarConsultaComponent } from './models/consulta/adicionar/adiciona
     MedicoViewComponent,
     ConsultaViewComponent,
     ListaConsultaComponent,
-    AdicionarConsultaComponent
+    AdicionarConsultaComponent,
+    EnderecoComponent
   ],
   imports: [
     BrowserModule,

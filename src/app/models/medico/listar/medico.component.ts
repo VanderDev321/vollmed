@@ -10,6 +10,7 @@ import { MedicoServiceService } from 'src/app/services/medicos/medico-service.se
 })
 export class MedicoComponent implements OnInit {
 
+
   listaMedicos: Medico[] = [];
 
   constructor(private medicoService: MedicoServiceService,
@@ -23,11 +24,14 @@ export class MedicoComponent implements OnInit {
     }
   )
 }
+buscaPaciente($event: FocusEvent) {
+  throw new Error('Method not implemented.');
+  }
 
 editar(medico:Medico){
     this.route.navigateByUrl(`detalheMedico/${medico.id}`);
 }
-adcionarNovo() {
+adicionarNovo() {
   this.route.navigateByUrl('/adicionarMedico');
 }
 

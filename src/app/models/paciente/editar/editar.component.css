@@ -1,52 +1,66 @@
-.editar{
-  display: contents;
-  min-height: 190vh;
+.main{
+  height: 130vh;
 }
-.editar-cabecalho{
+.cabecalho{
   display: block;
   text-align: center;
-  font-size: 1.75em;
-  margin-bottom: 0.25em;
-  text-transform:capitalize;
+  padding:1em;
 }
-.editar-formulario{
-  padding: 1.7em;
-  text-align: justify;
-  min-height: 50vh;
+.cabecalho h2{
+  font-size:2em;
+  text-transform: uppercase;
+  padding:0.5em;
+}
+.cabecalho h3{
+  font-size: 1.5em;
+  font-weight: 100;
+  margin: 0.3em;
+}
+.cabecalho span{
+  font-weight: 600;
+  margin-right: 0.3em;
 }
 .formulario{
-  display: block;
- font-size: 1.6em;
- text-transform: capitalize;
- min-height: 50vh;
+  height: 90vh;
 }
-.formulario label{
-  display: inline-block;
-  font-size: 0.85em;
-  font-weight: 600;
-  margin: 0.35em 0.35em 1.3em 0.65em;
+.editar-form label {
+    display: block;
+    padding:0.35em;
+    margin-left:40%;
+    font-size: 1.3em;
+    font-weight: 500;
 }
-.formulario input{
-  display: inline;
-  padding: 0.25em;
-  font-size: 0.85em;
+.editar-form input{
+  margin-left: 40%;
+  width: 25em;
+  display:block;
+  padding: 0.30em;
+  font-size: 0.95em;
   text-align: center;
   border:1px groove #e1e1d5;
   border-radius: 1em;
 }
-.editar-botao {
+.editar-form h3{
+  font-size: 1.3em;
+  margin: 0.8em 0 0.8em 40em;
+}
+.editar-form textarea{
+  margin-left: 40%;
+  border-radius: 1em;
+}
+.acoes{
+  padding: 1em;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding:0.35em;
+  margin: 0.5em;
 }
-#uf {
-  padding:0.1em !important;
-}
-.editar-botao button{
-  font-size: 1.2em;
-  margin:0.35em;
-  border:1px none;
-  border-radius: 1em;
-  padding:1em;
+.acoes button{
+  font-size:1.5em;
+  padding:0.5em ;
+  margin-right: 0.35em;
+  border:1px transparent #2e4053;
+  border-radius: 0.5em;
+  box-shadow: 1px 2px 1px #2e4053;
+
 }

@@ -9,6 +9,9 @@ import { ConsultaServiceService } from 'src/app/services/consultas/consulta-serv
   styleUrls: ['./lista-consulta.component.css']
 })
 export class ListaConsultaComponent implements OnInit {
+buscaConsulta($event: FocusEvent) {
+throw new Error('Method not implemented.');
+}
 listaConsulta:Consulta[] =[];
 listaConsultasAtivas:Consulta[] = [];
 
