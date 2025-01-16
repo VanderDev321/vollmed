@@ -74,9 +74,9 @@
       "cep": "20010020",
       "logradouro": "Rua São José",
       "bairro": "Centro",
-      "numero": "46",
+      "numero": "23",
       "estado": "RJ",
-      "complemento": ""
+      "complemento": "embaixo da ponte"
     },
     {
       "id": "8",
@@ -126,11 +126,11 @@
       "email": "alfred.robert@vollmed.com",
       "telefone": "61 94040-2106",
       "especialidade": "clinica médica",
-      "cep": "02233444",
-      "logradouro": "quadra 14 lote 290 apartamento",
-      "bairro": "leste",
-      "numero": "500",
-      "estado": "DF",
+      "cep": "20010030",
+      "logradouro": "Travessa Tinoco",
+      "bairro": "Centro",
+      "numero": "23",
+      "estado": "RJ",
       "complemento": ""
     },
     {
@@ -179,7 +179,7 @@
       "id": "5",
       "nome": "Vanderson Teles Maia",
       "crm": "676553",
-      "email": "vander.vollmed@email.com",
+      "email": "vander.vollmed@vollmed.com",
       "telefone": "55 99174-0034",
       "especialidade": "clinica médica",
       "cep": "72309309",
@@ -188,6 +188,20 @@
       "numero": "16",
       "estado": "DF",
       "complemento": "residência própria."
+    },
+    {
+      "id": "6",
+      "nome": "Cleberson Alvez Coimbra",
+      "crm": "257776",
+      "email": "cleberson.coimbra.ortopedia@vollmed.com",
+      "telefone": "21 97544-1988",
+      "especialidade": "ORTOPEDIA",
+      "cep": "20010040",
+      "logradouro": "Travessa Tocantins",
+      "bairro": "Centro",
+      "numero": "29",
+      "estado": "RJ",
+      "complemento": "apartamento 313"
     }
   ],
   "consultas": [
@@ -198,9 +212,9 @@
       "medico": "Alberian Potter Clinff",
       "data": "23/04/2024",
       "hora": "08:00:00h",
-      "ativo": true,
+      "ativo": false,
       "motivoCancelamento": {
-        "motivo-cancelamento": ""
+        "motivoCancelamento": "outros"
       }
     },
     {
@@ -283,6 +297,18 @@
       "medico": "Magda Schutz Castro",
       "paciente": [
         "Tatiane Franciele Alves Soares"
+      ]
+    },
+    {
+      "id": "9",
+      "ativo": true,
+      "motivoCancelamento": "",
+      "data": "10/12/2024",
+      "hora": "14:00:00h",
+      "especialidade": "clinica médica",
+      "medico": "Vanderson Teles Maia",
+      "paciente": [
+        "João OLiveira Francisco"
       ]
     }
   ],

@@ -7,7 +7,7 @@ export interface Login {
 }
 
 export interface Paciente {
-  id?: number ,
+  id?: string ,
   nome: string,
   cpf: string,
   email: string,
@@ -20,7 +20,7 @@ export interface Paciente {
   complemento?: string
 }
 export interface Medico {
-  id?:number ,
+  id?:string ,
   nome:string,
   crm:string,
   email:string,
@@ -34,7 +34,7 @@ export interface Medico {
   complemento?:string
 }
 export interface Consulta{
-  id?:number,
+  id?:string,
   especialidade:string,
   paciente:string,
   medico:string,

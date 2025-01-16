@@ -12,7 +12,7 @@
       <input type="text" formControlName="telefone" id="telefone">
       <h3>Informações de endereço:</h3>
       <label for="cep">CEP:</label>
-      <input type="text" formControlName="cep" id="cep">
+      <input type="text" formControlName="cep" id="cep" (blur)="buscarCep($event)">
       <label for="logradouro">Endereço:</label>
       <input type="text" formControlName="logradouro" id="logradouro">
       <label for="bairro">Bairro:</label>

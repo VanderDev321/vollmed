@@ -34,9 +34,7 @@ export class PacienteServiceService {
     return this.httpCliente.get<Paciente>(url);
   }
   buscarPorCPF(cpf:string):Observable<Paciente[]>{
-    console.log("numero: "+cpf)
     let param = new HttpParams().set("cpf",cpf);
-
     return this.httpCliente.get<Paciente[]>(this.url,{params:param});
 
   }
