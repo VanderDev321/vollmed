@@ -23,8 +23,8 @@
         <tbody class="card-consulta" *ngFor="let consulta of listaConsultasAtivas" routerLink="/detalheConsulta/{{consulta.id}}" >
           <td>{{consulta.data}}</td>
           <td>{{consulta.hora}}</td>
-          <td>{{consulta.paciente}}</td>
-          <td>{{consulta.medico}}</td>
+          <td class="celula-paciente">{{consulta.paciente}}</td>
+          <td class="celula-medico">{{consulta.medico}}</td>
           <td class="especialidade">{{consulta.especialidade}}</td>
         </tbody>
       </table>

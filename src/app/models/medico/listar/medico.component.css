@@ -2,7 +2,7 @@
 .box{
   text-align: center;
   display: block;
-  height: 120vh;
+  min-height: 150vh;
  }
  .cabecalho{
    font-size: 1.5em;
@@ -26,6 +26,7 @@
    padding: 0.35em 1em;
    border: none;
    margin-bottom: 1em;
+   border-radius: 1.5em;
  }
  .card{
    display: inline-block;

@@ -1,9 +1,9 @@
-<div class="adicionar-container">
-  <div  ngClass="cabecalho">
-    <h2>Adicionar novo paciente</h2>
-    <p>Insira as informações do paciente</p>
-  </div>
-  <div class="formulario">
+<section class="adicionar-container">
+  <header ngClass="cabecalho">
+    <h2> novo paciente</h2>
+    <p>Insira as informações:</p>
+  </header>
+  <main class="formulario">
       <form #f="ngForm" (ngSubmit)="novo(f)" >
 
         <label for="nome">Nome:</label>
@@ -36,6 +36,9 @@
           <app-mensagem *ngIf="telefone.errors?.['pattern']" mensagem="preenchimento incorreto "></app-mensagem>
         </div>
 
+
+
+        <p>Informações de endereço: </p>
         <label for="cep">CEP:</label>
         <input type="text" name="cep"  placeholder="insira somente números" ngModel #cep="ngModel" pattern="^(\d{5})(-?\d{3})$" minlength="8" maxlength="9" required (blur)="pesquisarCep($event,f)">
         <div *ngIf="cep.invalid && cep.touched || cep.dirty">
@@ -44,8 +47,6 @@
           <app-mensagem *ngIf="cep.errors?.['maxlength']" mensagem="quantidade de números é superior ao padrão de cep da região"></app-mensagem>
           <app-mensagem *ngIf="cep.errors?.['pattern']" mensagem="O padrão de cep deve ser:xxxxxxxx ou xxxxx-xxx"></app-mensagem>
         </div>
-
-        <p>Informações de endereço: </p>
 
         <label for="logradouro">Logradouro:</label>
         <input type="text" name="logradouro" ngModel #logradouro="ngModel" required>
@@ -101,9 +102,9 @@
         <label for="complemento">Complemento:</label>
         <input type="text" name="complemento" ngModel #complemento="ngModel" placeholder="informações adicionais">
         <div class="acoes">
-          <button class="botao" (click)="retornarParaLista()">Cancelar</button>
           <button class ="botao" type="submit" [disabled]="f.invalid">Enviar dados</button>
+          <button class="botao" (click)="retornarParaLista()">Cancelar</button>
         </div>
       </form>
-    </div>
-  </div>
+    </main>
+  </section>

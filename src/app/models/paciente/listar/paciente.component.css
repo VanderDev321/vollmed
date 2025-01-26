@@ -2,7 +2,7 @@
 .box{
  text-align: center;
  display: block;
- height: 150vh;
+ min-height: 160vh;
 }
 .cabecalho{
   font-size: 1.5em;
@@ -12,6 +12,7 @@
 .filtro{
   text-align: center;
   padding: 0.5em;
+  margin-bottom: 1em;
 }
 .filtro input{
   width: 20%;
@@ -26,6 +27,7 @@
   padding: 0.35em 1em;
   border: none;
   margin-bottom: 1em;
+  border-radius: 1.5em;
 }
 .card{
   display: inline-block;

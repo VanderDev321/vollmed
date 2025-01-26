@@ -2,10 +2,10 @@
 .consulta-container{
   text-align: center;
   display: block;
-  height: 150vh;
+  min-height: 190vh;
  }
  .consulta-cabecalho{
-   font-size: 2em;
+   font-size: 1.5em;
    text-transform: uppercase;
    margin:0.5em;
  }
@@ -29,6 +29,7 @@
    text-align: center;
    padding: 0.35em 1em;
    border: none;
+   border-radius: 1.5rem;
    margin-bottom: 1em;
  }
  .lista-todas{
@@ -54,6 +55,9 @@
    border-bottom: 1px solid black;
    padding:0.6em;
    cursor: pointer;
+ }
+ .celula-paciente,.celula-medico{
+    width: 25%;
  }
  .especialidade{
   text-transform: uppercase;

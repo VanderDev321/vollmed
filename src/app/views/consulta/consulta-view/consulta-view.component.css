@@ -1,5 +1,5 @@
 .card-view{
-  height: 100vh;
+  min-height: 100vh;
 }
 .cabecalho{
   text-align: center;

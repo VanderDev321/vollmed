@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   margin: 1em 0 1.5em 0;
-  height: 95vh;
+  height: 100vh;
 }
 .box h2{
   margin:1em;
@@ -23,5 +23,5 @@
   margin:0.25em;
   justify-content: space-evenly;
   border:2px solid #4F4F4F ;
-  border-radius: 20px;
+  border-radius: 1em;
 }

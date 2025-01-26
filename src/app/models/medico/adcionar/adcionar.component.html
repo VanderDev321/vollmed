@@ -1,9 +1,9 @@
 <section class="adicionar-container">
-  <div class="cabecalho">
-    <h2>Adicionar novo médico</h2>
+  <header class="cabecalho">
+    <h2> novo médico</h2>
     <p>Insira as informações: </p>
-  </div>
-  <div class="formulario">
+  </header>
+  <main class="formulario">
     <form #f="ngForm" (ngSubmit)="adicionar(f)">
       <p class="dadosPessoais">Dados pessoais:</p>
       <label for="nome">Nome:</label>
@@ -89,11 +89,11 @@
         <option value="EX">Estrangeiro</option>
       </select>
       <label for="complemento">complemento:</label>
-      <textarea name="complemento" id="complemento" ngModel></textarea>
+      <input name="complemento" id="complemento" ngModel>
       <div class="acoes">
         <button type="submit" [disabled]="f.invalid">Enviar Dados</button>
         <button (click)="cancelar()">Cancelar</button>
       </div>
     </form>
-  </div>
+  </main>
 </section>
