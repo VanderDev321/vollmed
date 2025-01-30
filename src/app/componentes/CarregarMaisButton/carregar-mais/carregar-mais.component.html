@@ -1,0 +1,6 @@
+<div class="botao_mais" *ngIf=" HaMaisArquivos else semMaisDados ">
+  <button class="botao_carrega_mais">Carregar Mais</button>
+</div>
+<ng-template #semMaisDados>
+  <p class="sem_dados">Não existem mais dados à serem carregados!</p>
+</ng-template>
