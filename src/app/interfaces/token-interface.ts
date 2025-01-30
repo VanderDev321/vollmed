@@ -52,3 +52,12 @@ export interface DTOConsulta{
   especialidade:string
 }
 
+export interface DTOPaginacao{
+  firt:string,
+  prev:string,
+  next:string,
+  last:string,
+  pages:string,
+  itens:string,
+  data:Paciente[];
+}

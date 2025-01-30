@@ -20,10 +20,18 @@ export class PacienteComponent implements OnInit {
   constructor(private service:PacienteServiceService , private router:Router ) { }
 
   ngOnInit(): void {
-    this.service.buscar().subscribe(pacientes =>{
-      this.listaPacientes = pacientes;
+    this.service.buscar(this.paginaAtual).subscribe(pacientes =>{
+      this.listaPacientes = pacientes.data;
     })
+  }
+  carregarMais(){
+    this.service.buscar(++this.paginaAtual).subscribe(pacientes =>{
+      this.listaPacientes.push(...pacientes.data);
+      if(pacientes.next == null){
+        this.haMaisDados = false;
+      }
 
+    })
   }
 
     buscaPaciente(nome:any){
