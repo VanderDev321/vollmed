@@ -6,8 +6,8 @@
     <button class="botao" (click)="adicionarNovo()">novo</button>
   </div>
   <h1>Lista de pacientes:</h1>
-  <div class="filtro">
-    <input name="filtro" type="search" placeholder="buscar nome" (blur)="buscaPaciente($event)">
+  <div class="filtro" *ngIf=" listaPacientes.length > 0">
+    <input name="filtro" type="search" placeholder="buscar nome" >
   </div>
   <div
     class="lista-pacientes"

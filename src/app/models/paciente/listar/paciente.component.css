@@ -53,6 +53,9 @@ td{
   padding:0.6em;
   cursor: pointer;
 }
+.lista-vazia{
+  padding:1rem;
+ }
 .voltar button{
   border-radius: 2rem;
   font-size: 1em;

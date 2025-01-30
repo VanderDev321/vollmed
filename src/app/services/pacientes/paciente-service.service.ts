@@ -13,11 +13,8 @@ export class PacienteServiceService {
 
   constructor(private httpCliente: HttpClient) { }
 
-  buscar(pagina:number):Observable<DTOdadosPaginacao<Paciente> >{
-    let itensPorPagina:number = 7;
-    let params = new HttpParams().set("_page",pagina).set("_per_page",itensPorPagina);
-
-    return this.httpCliente.get<DTOdadosPaginacao<Paciente> >(this.url,{params:params});
+  buscar():Observable<Paciente[]>{
+    return this.httpCliente.get<Paciente[]>(this.url);
   }
   atualizar(paciente:Paciente):Observable<Paciente>{
     const urlEdit = `${this.url}/${paciente.id}`;

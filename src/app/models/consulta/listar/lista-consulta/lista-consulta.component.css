@@ -62,6 +62,9 @@
  .especialidade{
   text-transform: uppercase;
  }
+ .listaVazia{
+  padding:1rem;
+ }
  .voltar button{
    border-radius: 2rem;
    font-size: 1em;

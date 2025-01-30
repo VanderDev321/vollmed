@@ -51,13 +51,4 @@ export interface DTOConsulta{
   hora:Date,
   especialidade:string
 }
-export interface DTOdadosPaginacao<T>{
-  firt:string,
-  prev:string,
-  next:string,
-  last:string,
-  pages:string,
-  itens:string,
-  data:Paciente[];
-}
 

@@ -5,8 +5,8 @@
   <div class="acao-nova">
     <button class="botao" (click)="adicionarNova()">nova</button>
     <p>consultas agendadas:</p>
-    <div class="filtro">
-      <input name="filtro" type="text" placeholder="buscar nome" (blur)="buscaConsulta($event)">
+    <div class="filtro" *ngIf="listaConsultasAtivas.length > 0">
+      <input name="filtro" type="text" placeholder="buscar nome" >
     </div>
   </div>
 

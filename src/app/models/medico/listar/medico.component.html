@@ -6,8 +6,8 @@
     <button class="botao" (click)="adicionarNovo()">novo</button>
   </div>
   <h1>Lista de medicos:</h1>
-  <div class="filtro">
-    <input name="filtro" type="text" placeholder="buscar nome" (blur)="buscaPaciente($event)">
+  <div class="filtro" *ngIf="listaMedicos.length > 0">
+    <input name="filtro" type="text" placeholder="buscar nome">
   </div>
   <div
     class="lista-pacientes"
@@ -37,7 +37,7 @@
   </div>
   <ng-template #listaVazia>
     <div class="lista-vazia">
-      <p>Não há pacientes a exibir!</p>
+      <p>Não há médicos a exibir!</p>
     </div>
   </ng-template>
   <div class="voltar">
