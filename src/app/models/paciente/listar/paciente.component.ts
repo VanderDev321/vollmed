@@ -13,16 +13,28 @@ import { PacienteServiceService } from 'src/app/services/pacientes/paciente-serv
 export class PacienteComponent implements OnInit {
 
   listaPacientes:Paciente[] =[];
+  paginaAtual:number = 1 ;
+  haMaisDados:boolean = true;
 
 
   constructor(private service:PacienteServiceService , private router:Router ) { }
 
   ngOnInit(): void {
-    this.service.buscar().subscribe(pacientes =>{
-      this.listaPacientes = pacientes;
-    })
+    this.service.buscar(this.paginaAtual).subscribe(pacientes =>{
+      this.listaPacientes = pacientes.data;
 
+    })
   }
+
+    carregarMais(){
+      this.service.buscar(++this.paginaAtual).subscribe( pacientes =>{
+        this.listaPacientes.push(...pacientes.data);
+        if(pacientes.next ===null){
+          this.haMaisDados = false;
+        }
+
+      })
+    }
 
     buscaPaciente(nome:any){
       const digitado = nome.target.value;
@@ -32,6 +44,7 @@ export class PacienteComponent implements OnInit {
     adicionarNovo() {
       this.router.navigate(["/adicionarPaciente"]);
       }
+
 
 
 }

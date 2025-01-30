@@ -1,7 +1,7 @@
 import { HttpClient,HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Paciente } from '../../interfaces/token-interface';
+import { DTOdadosPaginacao, Paciente } from '../../interfaces/token-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +13,11 @@ export class PacienteServiceService {
 
   constructor(private httpCliente: HttpClient) { }
 
-  buscar():Observable<Paciente[]>{
-    return this.httpCliente.get<Paciente[]>(this.url);
+  buscar(pagina:number):Observable<DTOdadosPaginacao<Paciente> >{
+    let itensPorPagina:number = 7;
+    let params = new HttpParams().set("_page",pagina).set("_per_page",itensPorPagina);
+
+    return this.httpCliente.get<DTOdadosPaginacao<Paciente> >(this.url,{params:params});
   }
   atualizar(paciente:Paciente):Observable<Paciente>{
     const urlEdit = `${this.url}/${paciente.id}`;

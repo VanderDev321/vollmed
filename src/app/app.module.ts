@@ -22,6 +22,7 @@ import { ConsultaViewComponent } from './views/consulta/consulta-view/consulta-v
 import { ListaConsultaComponent } from './models/consulta/listar/lista-consulta/lista-consulta.component';
 import { AdicionarConsultaComponent } from './models/consulta/adicionar/adicionar-consulta/adicionar-consulta.component';
 import { EnderecoComponent } from './models/endereco/endereco.component';
+import { CarregarMaisComponent } from './componentes/CarregarMaisButton/carregar-mais/carregar-mais.component';
 
 
 
@@ -45,7 +46,8 @@ import { EnderecoComponent } from './models/endereco/endereco.component';
     ConsultaViewComponent,
     ListaConsultaComponent,
     AdicionarConsultaComponent,
-    EnderecoComponent
+    EnderecoComponent,
+    CarregarMaisComponent
   ],
   imports: [
     BrowserModule,
