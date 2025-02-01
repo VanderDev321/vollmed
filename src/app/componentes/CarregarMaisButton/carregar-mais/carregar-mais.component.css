@@ -1,11 +1,10 @@
 .botao_mais{
-  padding:0.5em;
+  padding:0.5rem;
 }
 .botao_carrega_mais{
   font-size: 1rem;
-  padding:0.5em;
+  padding:0.5rem;
   border: none;
-  margin: 0 0 1em 0;
 }
 .sem_dados{
   padding:1rem;

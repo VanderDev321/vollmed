@@ -2,46 +2,48 @@
   <header class="cabecalho">
     <h1>Seção de pacientes</h1>
   </header>
-  <div>
-    <button class="botao" (click)="adicionarNovo()">novo</button>
-  </div>
-  <h1>Lista de pacientes:</h1>
-  <div class="filtro" *ngIf=" listaPacientes.length > 0">
-    <input name="filtro" type="search" placeholder="buscar nome" >
-  </div>
-  <div
-    class="lista-pacientes"
-    *ngIf="listaPacientes.length > 0; else listaVazia"
-  >
+  <main>
     <div>
-      <div class="card">
-        <table>
-          <thead >
-            <tr class="linha">
-              <th>Nome</th>
-              <th>CPF</th>
-              <th>Telefone</th>
-            </tr>
-          </thead>
-          <tbody  *ngFor="let paciente of listaPacientes"
-          routerLink="/detalhePaciente/{{ paciente.id }}">
-            <tr class="coluna">
-              <td>{{paciente.nome}}</td>
-              <td>{{paciente.cpf}}</td>
-              <td>{{paciente.telefone}}</td>
-            </tr>
-          </tbody>
-        </table>
-        <app-carregar-mais *ngIf="listaPacientes.length > 0" [HaMaisArquivos]="haMaisDados" (click)="carregarMais()"></app-carregar-mais>
+      <button class="botao" (click)="adicionarNovo()">novo</button>
+    </div>
+    <h1>Lista de pacientes:</h1>
+    <div class="filtro" *ngIf=" listaPacientes.length > 0">
+      <input name="filtro" type="search" placeholder="buscar nome" >
+    </div>
+    <div
+      class="lista-pacientes"
+      *ngIf="listaPacientes.length > 0; else listaVazia"
+    >
+      <div>
+        <div class="card">
+          <table>
+            <thead >
+              <tr class="linha">
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+              </tr>
+            </thead>
+            <tbody  *ngFor="let paciente of listaPacientes"
+            routerLink="/detalhePaciente/{{ paciente.id }}">
+              <tr class="coluna">
+                <td>{{paciente.nome}}</td>
+                <td>{{paciente.cpf}}</td>
+                <td>{{paciente.telefone}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <app-carregar-mais *ngIf="listaPacientes.length > 0" [HaMaisArquivos]="haMaisDados" (click)="carregarMais()"></app-carregar-mais>
+        </div>
       </div>
     </div>
-  </div>
-  <ng-template #listaVazia>
-    <div class="lista-vazia">
-      <p>Não há pacientes a exibir!</p>
-    </div>
-  </ng-template>
-  <div class="voltar">
+    <ng-template #listaVazia>
+      <div class="lista-vazia">
+        <p>Não há pacientes a exibir!</p>
+      </div>
+    </ng-template>
+  </main>
+  <footer class="voltar">
     <button routerLink="/contas">todos perfis</button>
-  </div>
+  </footer>
 </section>

@@ -2,7 +2,8 @@
 .box{
  text-align: center;
  display: block;
- min-height: 200vh;
+ padding-bottom:5rem;
+ max-height: stretch;
 }
 .cabecalho{
   font-size: 1.5em;
@@ -22,12 +23,13 @@
   text-align: center;
 }
 .botao{
-  font-size: 1.3em;
+  font-size: 1.3rem;
   text-align: center;
   padding: 0.35em 1em;
   border: none;
   margin-bottom: 1em;
   border-radius: 1.5em;
+  
 }
 .card{
   display: inline-block;
@@ -59,6 +61,6 @@ td{
 .voltar button{
   border-radius: 2rem;
   font-size: 1em;
-  padding:0.2em 1em;
+  padding:0.2rem 1rem;
 }
 
