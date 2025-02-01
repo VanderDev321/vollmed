@@ -11,21 +11,21 @@ import { MedicoServiceService } from 'src/app/services/medicos/medico-service.se
 export class MedicoComponent implements OnInit {
 
 
+
   listaMedicos: Medico[] = [];
+  haMaisDados:boolean = true;
+  paginaAtual:number = 1;
 
   constructor(private medicoService: MedicoServiceService,
     private route:Router
   ) { }
 
   ngOnInit(): void {
-    this.medicoService.listar().subscribe(medicos =>{
-      this.listaMedicos = medicos
+    this.medicoService.listar(this.paginaAtual).subscribe(medicos =>{
+      this.listaMedicos = medicos.data;
     }
   )
 }
-buscaPaciente($event: FocusEvent) {
-  throw new Error('Method not implemented.');
-  }
 
 editar(medico:Medico){
     this.route.navigateByUrl(`detalheMedico/${medico.id}`);
@@ -33,5 +33,13 @@ editar(medico:Medico){
 adicionarNovo() {
   this.route.navigateByUrl('/adicionarMedico');
 }
+carregarMaisDados() {
+    this.medicoService.listar(++this.paginaAtual).subscribe( medicos =>{
+      this.listaMedicos.push(...medicos.data);
+      if (medicos.next == null) {
+        this.haMaisDados = false;
+      }
+    })
+  }
 
 }

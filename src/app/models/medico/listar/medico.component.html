@@ -33,6 +33,7 @@
           </tbody>
         </table>
       </div>
+      <app-carregar-mais (click)="carregarMaisDados()" *ngIf="listaMedicos.length > 0" [HaMaisArquivos]="haMaisDados"></app-carregar-mais>
     </div>
   </div>
   <ng-template #listaVazia>

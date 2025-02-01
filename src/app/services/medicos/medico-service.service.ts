@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Medico } from '../../interfaces/token-interface';
+import { DTOPaginacao, Medico } from '../../interfaces/token-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +18,10 @@ export class MedicoServiceService {
     return this.httpCliente.post<Medico>(this.URL , medico);
   }
 
-  listar():Observable<Medico[]>{
-    return this.httpCliente.get<Medico[]>(this.URL);
+  listar(pagina:number):Observable<DTOPaginacao>{
+    const numeroItensPagina:number = 5;
+    let params = new HttpParams().set("_page",pagina).set("_per_page",numeroItensPagina);
+    return this.httpCliente.get<DTOPaginacao>(this.URL,{params:params});
   }
   editar(medico:Medico):Observable<Medico>{
     const urlEdicao = `${this.URL}/${medico.id}`;

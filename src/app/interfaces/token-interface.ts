@@ -1,3 +1,5 @@
+import { Pageable } from "./pageavel";
+
 export interface TokenInterface {
   token:string;
 }
@@ -6,7 +8,7 @@ export interface Login {
   senha:string
 }
 
-export interface Paciente {
+export interface Paciente extends Pageable {
   id?: string ,
   nome: string,
   cpf: string,
@@ -19,7 +21,7 @@ export interface Paciente {
   estado: string,
   complemento?: string
 }
-export interface Medico {
+export interface Medico extends Pageable {
   id?:string ,
   nome:string,
   crm:string,
@@ -59,5 +61,5 @@ export interface DTOPaginacao{
   last:string,
   pages:string,
   itens:string,
-  data:Paciente[];
+  data:Pageable[];
 }
