@@ -1,8 +1,9 @@
 
 .consulta-container{
   text-align: center;
-  display: block;
-  min-height: 190vh;
+ display: block;
+ padding-bottom:5rem;
+ max-height: stretch;
  }
  .consulta-cabecalho{
    font-size: 1.5em;
@@ -64,9 +65,12 @@
  .listaVazia{
   padding:1rem;
  }
+ .voltar{
+  margin:1.5rem;
+}
  .voltar button{
    border-radius: 2rem;
-   font-size: 1em;
-   padding:0.2em 1em;
+   font-size: 1rem;
+   padding:0.2rem 1rem;
  }
 

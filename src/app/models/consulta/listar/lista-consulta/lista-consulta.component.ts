@@ -22,7 +22,7 @@ listaConsultasAtivas:Consulta[] = [];
   ngOnInit(): void {
     this.service.listar().subscribe(consultas=>{
       this.listaConsulta = consultas;
-      this.listarAtivas(consultas);
+      this.listarAtivas(this.listaConsulta);
 
     })
   }
