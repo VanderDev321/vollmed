@@ -11,12 +11,12 @@
   border-radius: 5px;
 }
 h2{
-  padding:1em;
+  padding:1rem;
 
 }
 h2:hover{
   color:gold;
-  transition:all 0.7s ease-in-out ;
+  transition:all 0.4s ease-in-out ;
 }
 header a {
   margin-left: 2em;
@@ -32,7 +32,8 @@ header a:hover{
 
 }
 img{
- max-width:20em ;
- max-height:17em;
+ max-width:20rem ;
+ max-height:17rem;
  cursor: pointer;
+ border-radius: 1em;
 }
