@@ -37,8 +37,9 @@ export class PacienteComponent implements OnInit {
     buscaPaciente(nome:any){
       const digitado = nome.target.value;
       if(digitado.length > 2){
-      this.listaPacientes = this.listaPacientes.filter(paciente => paciente.nome === String(digitado));
+      this.listaPacientes = this.listaPacientes.filter(paciente => paciente.nome.includes(String(digitado)));
       }
+      
 
 
     }
