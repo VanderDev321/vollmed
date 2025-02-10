@@ -39,9 +39,6 @@ export class PacienteComponent implements OnInit {
       if(digitado.length > 2){
       this.listaPacientes = this.listaPacientes.filter(paciente => paciente.nome.includes(String(digitado)));
       }
-      
-
-
     }
 
     adicionarNovo() {
