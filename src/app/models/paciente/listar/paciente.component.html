@@ -8,7 +8,7 @@
     </div>
     <h1>Lista de pacientes:</h1>
     <div class="filtro" *ngIf=" listaPacientes.length > 0">
-      <input name="filtro" type="search" placeholder="buscar nome" >
+      <input name="filtro" type="search" placeholder="buscar nome" (blur)="buscaPaciente($event)">
     </div>
     <div
       class="lista-pacientes"
