@@ -10,8 +10,6 @@ import { MedicoServiceService } from 'src/app/services/medicos/medico-service.se
 })
 export class MedicoComponent implements OnInit {
 
-
-
   listaMedicos: Medico[] = [];
   haMaisDados:boolean = true;
   paginaAtual:number = 1;
@@ -25,6 +23,12 @@ export class MedicoComponent implements OnInit {
       this.listaMedicos = medicos.data;
     }
   )
+}
+filtrarMedico(dado:any){
+  const pesquisado = dado.target.value;
+  if(pesquisado.length > 2){
+      this.listaMedicos = this.listaMedicos.filter(medico => medico.nome.includes(String(pesquisado)));
+  }
 }
 
 editar(medico:Medico){
