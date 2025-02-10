@@ -22,12 +22,11 @@
       <label for="estado">Estado:</label>
       <input type="text" formControlName="estado" id="uf">
       <label for="complemento">Complemento:</label>
-      <textarea formControlName="complemento" id="complemento" cols="53" rows="7"></textarea>
-      <div class="acoes">
-        <button (click)="editar(formulario)" [disabled]="formulario.invalid">Confirmar</button>
-        <button (click)="cancelar()">Cancelar</button>
-      </div>
-
+      <input formControlName="complemento" id="complemento" >
     </form>
+    <div class="acoes">
+      <button (click)="editar(formulario)" [disabled]="formulario.invalid">Confirmar</button>
+      <button (click)="cancelar()">Cancelar</button>
+    </div>
   </div>
 </section>

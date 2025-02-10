@@ -1,27 +1,27 @@
 .main{
-  height: 130vh;
+  min-height: 60rem;
+  display: block;
 }
 .cabecalho{
   display: block;
   text-align: center;
-  padding:1em;
+  padding:1rem;
 }
 .cabecalho h2{
-  font-size:2em;
+  font-size:1.5rem;
   text-transform: uppercase;
-  padding:0.5em;
+  padding:0.5rem;
 }
 .cabecalho h3{
   font-size: 1.5em;
   font-weight: 100;
-  margin: 0.3em;
 }
 .cabecalho span{
   font-weight: 600;
-  margin-right: 0.3em;
+  margin-right: 0.3rem;
 }
 .formulario{
-  height: 90vh;
+  height: 90%;
 }
 .editar-form label {
     display: block;
@@ -41,23 +41,20 @@
   border-radius: 1em;
 }
 .editar-form h3{
-  font-size: 1.3em;
-  margin: 0.8em 0 0.8em 40em;
-}
-.editar-form textarea{
-  margin-left: 40%;
-  border-radius: 1em;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0.1rem;
 }
 .acoes{
-  padding: 1em;
+  padding: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0.5em;
+  margin: 0.3rem;
 }
 .acoes button{
   font-size:1.5em;
-  padding:0.5em ;
+  padding:0.5rem ;
   margin-right: 0.35em;
   border:1px transparent #2e4053;
   border-radius: 0.5em;
