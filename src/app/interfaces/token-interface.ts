@@ -1,4 +1,4 @@
-import { Pageable } from "./pageavel";
+import { ConsultaPageable, Pageable } from "./pageavel";
 
 export interface TokenInterface {
   token:string;
@@ -35,7 +35,7 @@ export interface Medico extends Pageable {
   estado:string,
   complemento?:string
 }
-export interface Consulta{
+export interface Consulta extends ConsultaPageable{
   id?:string,
   especialidade:string,
   paciente:string,

@@ -9,9 +9,9 @@ import { ConsultaServiceService } from 'src/app/services/consultas/consulta-serv
   styleUrls: ['./lista-consulta.component.css']
 })
 export class ListaConsultaComponent implements OnInit {
-buscaConsulta($event: FocusEvent) {
-throw new Error('Method not implemented.');
-}
+
+haMaisDados: boolean = true;
+paginaAtual:number = 1;
 listaConsulta:Consulta[] =[];
 listaConsultasAtivas:Consulta[] = [];
 
@@ -20,8 +20,8 @@ listaConsultasAtivas:Consulta[] = [];
    ) { }
 
   ngOnInit(): void {
-    this.service.listar().subscribe(consultas=>{
-      this.listaConsulta = consultas;
+    this.service.listar(this.paginaAtual).subscribe(consultas=>{
+      this.listaConsulta = consultas.data;
       this.listarAtivas(this.listaConsulta);
 
     })
@@ -30,9 +30,23 @@ listaConsultasAtivas:Consulta[] = [];
   listarAtivas(consultas:Consulta[]){
     this.listaConsultasAtivas = consultas.filter((consulta) => consulta.ativo == true);
     }
+    buscarMaisRegistro() {
+      this.service.listar(++this.paginaAtual).subscribe( dados =>{
+        this.listaConsulta.push(...dados.data)
+        this.listarAtivas(this.listaConsulta);
+        if(dados.next == null){
+          this.haMaisDados = false;
+        }
+      })
+
+      }
     adicionarNova(){
       this.router.navigateByUrl("adicionarConsulta");
     }
+
+    buscaConsulta($event: FocusEvent) {
+      throw new Error('Method not implemented.');
+      }
 
 
 }

@@ -1,8 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Consulta } from 'src/app/interfaces/token-interface';
+import { ConsultaPageable } from 'src/app/interfaces/pageavel';
+import { Consulta, DTOPaginacao } from 'src/app/interfaces/token-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +17,10 @@ export class ConsultaServiceService {
   ) { }
 
 
-  listar():Observable<Consulta[]>{
-
-    return this.http.get<Consulta[]>(this.URL);
+  listar(pagina:number):Observable<DTOPaginacao>{
+    const itemPorPagina:number = 2;
+    const params = new HttpParams().set("_page",pagina).set("_per_page",itemPorPagina);
+    return this.http.get<DTOPaginacao>(this.URL, {params:params});
   }
   criar(consulta:Consulta){
     return this.http.post<Consulta>(this.URL,consulta);

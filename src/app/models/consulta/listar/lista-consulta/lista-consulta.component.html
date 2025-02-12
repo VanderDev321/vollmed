@@ -6,7 +6,7 @@
     <button class="botao" (click)="adicionarNova()">nova</button>
     <p>consultas agendadas:</p>
     <div class="filtro" *ngIf="listaConsultasAtivas.length > 0">
-      <input name="filtro" type="text" placeholder="buscar nome" >
+      <input name="filtro" type="text" placeholder="buscar consulta" >
     </div>
   </div>
 
@@ -29,7 +29,9 @@
         </tbody>
       </table>
     </div>
-  </div>
+    <app-carregar-mais *ngIf="listaConsultasAtivas.length > 0" [HaMaisArquivos]="haMaisDados"
+      (click)="buscarMaisRegistro()" ></app-carregar-mais>
+    </div>
   <div class="voltar">
     <button routerLink="/contas">todos perfis</button>
   </div>

@@ -23,7 +23,7 @@ import { ListaConsultaComponent } from './models/consulta/listar/lista-consulta/
 import { AdicionarConsultaComponent } from './models/consulta/adicionar/adicionar-consulta/adicionar-consulta.component';
 import { EnderecoComponent } from './models/endereco/endereco.component';
 import { CarregarMaisComponent } from './componentes/CarregarMaisButton/carregar-mais/carregar-mais.component';
-
+import { Pageable } from './interfaces/pageavel';
 
 
 @NgModule({
@@ -47,7 +47,8 @@ import { CarregarMaisComponent } from './componentes/CarregarMaisButton/carregar
     ListaConsultaComponent,
     AdicionarConsultaComponent,
     EnderecoComponent,
-    CarregarMaisComponent
+    CarregarMaisComponent,
+
   ],
   imports: [
     BrowserModule,
