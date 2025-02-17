@@ -10,6 +10,8 @@ import { ConsultaServiceService } from 'src/app/services/consultas/consulta-serv
 })
 export class ListaConsultaComponent implements OnInit {
 
+acao:boolean = false;
+texto:string ="filtrar";
 haMaisDados: boolean = true;
 paginaAtual:number = 1;
 listaConsulta:Consulta[] =[];
@@ -42,6 +44,15 @@ listaConsultasAtivas:Consulta[] = [];
       }
     adicionarNova(){
       this.router.navigateByUrl("adicionarConsulta");
+    }
+    acionarFiltro(){
+      if(this.texto ==="filtrar"){
+        this.acao = true;
+        this.texto = "fechar"
+      }else{
+        this.acao = false;
+        this.texto = "filtrar";
+      }
     }
 
 }

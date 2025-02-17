@@ -40,8 +40,9 @@
   border:1px solid gray;
   border-radius: 1rem;
  }
- .exibe-filtro-false{
 
+ .exibe-filtro-false{
+   display:none;
  }
  .botao{
    font-size: 1.3em;
@@ -49,7 +50,7 @@
    padding: 0.35em 1em;
    border: none;
    border-radius: 1.5rem;
-   margin-bottom: 1em;
+   margin-bottom: 1rem;
  }
  .lista-todas{
    display: inline-block;

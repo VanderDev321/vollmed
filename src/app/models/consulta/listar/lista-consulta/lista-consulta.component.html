@@ -5,8 +5,11 @@
   <div class="acao-nova">
     <button class="botao" (click)="adicionarNova()">nova</button>
     <p>consultas agendadas:</p>
-    <aside class="filtro" *ngIf="listaConsultasAtivas.length > 0">
-      <fieldset class="exibe-filtro-true">
+  </div>
+  <div *ngIf="listaConsultasAtivas.length > 0">
+    <button  class="botao" (click)="acionarFiltro()">{{texto}}</button>
+    <div class="filtro">
+      <fieldset ngClass="exibe-filtro-{{acao}}">
         <legend>escolha o que deseja filtrar</legend>
         <select name="tipo_filtro" >
           <option value="">selecionar</option>
@@ -17,7 +20,7 @@
         </select>
         <input type="text" name="pesquisa" id="pesquisa" placeholder="insira o termo a ser pesquisado">
       </fieldset>
-    </aside>
+    </div>
   </div>
 
   <div class="lista-todas" *ngIf="listaConsultasAtivas.length > 0 else listaVazia">
