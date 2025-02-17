@@ -18,7 +18,7 @@ export class ConsultaServiceService {
 
 
   listar(pagina:number):Observable<DTOPaginacao>{
-    const itemPorPagina:number = 2;
+    const itemPorPagina:number = 7;
     const params = new HttpParams().set("_page",pagina).set("_per_page",itemPorPagina);
     return this.http.get<DTOPaginacao>(this.URL, {params:params});
   }
