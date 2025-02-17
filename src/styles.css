@@ -28,7 +28,7 @@ html {
 
 button:hover {
   background: #31ff1e;
-  transition: all 0.5s ease-in;
+  transition: all 0.2s ease-in;
   border: 0.1rem solid #420505;
   box-shadow: 0.7rem 0.6rem 0.5rem #420505 ;
   border-radius: 10px;

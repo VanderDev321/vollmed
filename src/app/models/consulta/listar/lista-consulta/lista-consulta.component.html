@@ -5,9 +5,19 @@
   <div class="acao-nova">
     <button class="botao" (click)="adicionarNova()">nova</button>
     <p>consultas agendadas:</p>
-    <div class="filtro" *ngIf="listaConsultasAtivas.length > 0">
-      <input name="filtro" type="text" placeholder="buscar consulta" >
-    </div>
+    <aside class="filtro" *ngIf="listaConsultasAtivas.length > 0">
+      <fieldset class="exibe-filtro-true">
+        <legend>escolha o que deseja filtrar</legend>
+        <select name="tipo_filtro" >
+          <option value="">selecionar</option>
+          <option value="especialidade">Especialidade</option>
+          <option value="medico">Médico</option>
+          <option value="paciente">Paciente</option>
+          <option value="data">Data</option>
+        </select>
+        <input type="text" name="pesquisa" id="pesquisa" placeholder="insira o termo a ser pesquisado">
+      </fieldset>
+    </aside>
   </div>
 
   <div class="lista-todas" *ngIf="listaConsultasAtivas.length > 0 else listaVazia">
@@ -28,9 +38,9 @@
           <td class="especialidade">{{consulta.especialidade}}</td>
         </tbody>
       </table>
-    </div>
-    <app-carregar-mais *ngIf="listaConsultasAtivas.length > 0" [HaMaisArquivos]="haMaisDados"
-      (click)="buscarMaisRegistro()" ></app-carregar-mais>
+      <app-carregar-mais *ngIf="listaConsultasAtivas.length > 0" [HaMaisArquivos]="haMaisDados"
+        (click)="buscarMaisRegistro()" ></app-carregar-mais>
+      </div>
     </div>
   <div class="voltar">
     <button routerLink="/contas">todos perfis</button>

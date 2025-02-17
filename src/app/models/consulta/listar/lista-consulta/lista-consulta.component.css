@@ -14,15 +14,34 @@
   padding: 1em;
  }
  .filtro{
-   text-align: center;
-   padding: 0.5em;
+  display: flex;
+  justify-content: center;
+
  }
- .filtro input{
-   width: 20%;
-   border:1px solid #dcd9d1;
-   border-radius: 1em;
-   padding:0.5em 0.7em;
-   text-align: center;
+ .exibe-filtro-true{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width:50%;
+  padding: 1.3rem;
+ }
+ .exibe-filtro-true select{
+  text-align: center;
+  font-size: 1rem;
+  padding:0.3rem;
+  margin-bottom: 0.4rem;
+ }
+ .exibe-filtro-true input{
+  text-align: center;
+  font-size: 1.2rem;
+  width: 50%;
+  padding: 0.35rem;
+  border:1px solid gray;
+  border-radius: 1rem;
+ }
+ .exibe-filtro-false{
+
  }
  .botao{
    font-size: 1.3em;
