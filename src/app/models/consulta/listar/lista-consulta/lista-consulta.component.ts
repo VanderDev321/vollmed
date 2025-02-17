@@ -44,9 +44,4 @@ listaConsultasAtivas:Consulta[] = [];
       this.router.navigateByUrl("adicionarConsulta");
     }
 
-    buscaConsulta($event: FocusEvent) {
-      throw new Error('Method not implemented.');
-      }
-
-
 }
