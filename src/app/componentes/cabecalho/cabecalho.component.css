@@ -35,3 +35,26 @@ img{
  cursor: pointer;
 
 }
+@media screen and (max-width: 900px) {
+  .box{
+    flex-direction: column;
+    height: auto;
+  }
+  h2{
+    font-size: 2em;
+  }
+
+  img{
+    height: 22rem;
+  }
+  header a {
+    margin-bottom: 0.5rem;
+    width: 95%;
+    text-align: center;
+    margin-left: 0;
+    border:0.1rem solid #000000;
+    box-shadow: 1px 1px 3px #000000;
+  }
+
+
+}
