@@ -35,7 +35,7 @@ img{
  cursor: pointer;
 
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 914px) {
   .box{
     flex-direction: column;
     height: auto;

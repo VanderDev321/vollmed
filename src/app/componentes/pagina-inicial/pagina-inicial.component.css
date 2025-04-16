@@ -11,8 +11,8 @@
   background-position:90%;
 
 }
-.card {
-  font-size: 2em;
+.card-main {
+  font-size: 1.5rem;
   align-items: center;
 }
 
@@ -20,10 +20,42 @@ h3,h4{
   padding-bottom: 1em;
 }
 button{
-  font-size:20px;
+  font-size:1.5em;
   padding:1em 2em 1em 2em ;
   margin-top: 1.5rem;
   border-radius: 1.5em;
+}
+@media screen and (max-width:914px) {
+  .box{
+    width: 100%;
+    background-image: none;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: center;
+    padding:0;
+  }
+  .card-botao{
+    padding:2rem;
+    width: 95%;
+  }
+  .card-botao button{
+    font-size:2rem;
+    border-radius: 0%;
+    text-transform: lowercase;
+    padding:1.2rem;
+    width: 100%;
+  }
+  .card-botao button:hover{
+    box-shadow: none;
+    background:#adff2f;
+  }
+  .box h3{
+    font-size:1.3rem;
+  }
+  .box h4{
+    display: none;
+  }
+
 }
 
 
