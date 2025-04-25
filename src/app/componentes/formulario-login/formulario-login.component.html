@@ -1,14 +1,17 @@
-<div class="box">
-  <h3> Informe suas credenciais de login: </h3>
-</div>
-<div>
-  <form ngForm #f="ngForm" class="login box"  >
-    <label for="username">Usuário:</label>
-    <input type="text" name="username" id="username" ngModel required  #name="ngModel" minlength="5" />
-    <label for="password">Senha:</label>
-    <input type="password" name="password" id="password" ngModel #senha="ngModel" required/>
-  </form>
-</div>
-<div class="botao">
-  <button (click)="chamarContas(f)">Enviar dados</button>
-</div>
+<section class="form_login">
+
+  <div class="box">
+    <h3> Informe suas credenciais de login: </h3>
+  </div>
+  <div>
+    <form ngForm #f="ngForm" class="login box"  >
+      <label for="username">Usuário:</label>
+      <input type="text" name="username" id="username" ngModel required  #name="ngModel" minlength="5" />
+      <label for="password">Senha:</label>
+      <input type="password" name="password" id="password" ngModel #senha="ngModel" required/>
+    </form>
+  </div>
+  <div class="botao">
+    <button (click)="chamarContas(f)">Enviar dados</button>
+  </div>
+</section>
